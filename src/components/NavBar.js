@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './NavBar.css';
+import logo from '../assets/Logo.png'; // adjust the path if your logo is elsewhere
 
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">Sethuse</div>
+      <a href="#home" className="logo">
+        <img src={logo} alt="Sethuse Logo" />
+      </a>
 
       <div className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
         <a href="#home">Home</a>
