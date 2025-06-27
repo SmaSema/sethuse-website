@@ -1,37 +1,37 @@
-// src/components/NavBar.js
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
-import logo from '../assets/Logo.png'; // adjust the path if your logo is elsewhere
+import Logo from '../assets/Logo.png';  // Import the logo image
 
-function NavBar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const NavBar = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className="navbar">
-      <a href="#home" className="logo">
-        <img src={logo} alt="Sethuse Logo" />
-      </a>
-
-      <div className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-        <a href="#home">Home</a>
-        <a href="#programs">Programs</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
-        <a href="#donate" className="highlight">Donate</a>
+      <div className="navbar-logo">
+        <Link to="/">
+          <img src={Logo} alt="Sethuse Logo" className="logo" />
+        </Link>
       </div>
 
-      <div className="hamburger" onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+      <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+        <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link to="/programs" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
+        <Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link>
+        <Link to="/donate" className="donate-link" onClick={() => setMobileMenuOpen(false)}>Donate</Link>
+    </div>
+
+      <div className="mobile-menu-icon" onClick={toggleMenu}>
+        <div className={isMobileMenuOpen ? 'bar rotate1' : 'bar'}></div>
+        <div className={isMobileMenuOpen ? 'bar fade' : 'bar'}></div>
+        <div className={isMobileMenuOpen ? 'bar rotate2' : 'bar'}></div>
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;
