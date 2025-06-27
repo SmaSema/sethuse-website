@@ -1,9 +1,9 @@
-// src/pages/Programs.js
+// src/pages/Work.js
 import React from 'react';
 
-const Programs = () => (
+const OurWork = () => (
   <div>
-    <h1>Our Programs</h1>
+    <h1>Our Work</h1>
     <ul>
       <li>Women Empowerment Workshops</li>
       <li>Men Empowerment Sessions</li>
@@ -13,4 +13,4 @@ const Programs = () => (
   </div>
 );
 
-export default Programs;
+export default OurWork;

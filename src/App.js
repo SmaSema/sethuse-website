@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Programs from './pages/Programs';
-import Events from './pages/Events';
+import AboutUs from './pages/AboutUs';
+import OurWork from './pages/OurWork';
+import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
         <main style={{ flex: 1, padding: '2rem' }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/programs" element={<Programs />} />
-            <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/work" element={<OurWork />} />
+            <Route path="/contact" element={<ContactUs />} />
             <Route path="/donate" element={<Donate />} />
           </Routes>
         </main>

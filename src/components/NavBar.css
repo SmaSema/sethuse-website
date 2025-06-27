@@ -31,7 +31,7 @@
 }
 
 .navbar-links a:hover {
-  color: #28a745;
+  color: #0f97b9;
 }
 
 /* Highlight donate button */
@@ -88,11 +88,11 @@
 @media (max-width: 768px) {
   .navbar-links {
     position: absolute;
-    top: 60px; /* height of navbar + some */
+    top: 80px; /* height of navbar + some */
     right: 0;
     background-color: #5b5a5b;
     width: 100%;
-    max-height: 0;
+    max-height:0;
     overflow: hidden;
     flex-direction: column;
     display: flex;
@@ -102,7 +102,7 @@
   }
 
   .navbar-links.active {
-    max-height: 300px; /* enough height for links */
+    max-height: 400px; /* enough height for links */
   }
 
   .navbar-links a {
