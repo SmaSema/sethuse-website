@@ -54,15 +54,15 @@ button.primary:hover {
 button.secondary {
   background-color: #fff;
   color: #444;
-  border: 1px solid #ccc;
 }
 
 button.secondary:hover {
-  background-color: #eee;
+  background-color: #cc64cc;
 }
 
 @media (max-width: 768px) {
   .hero-overlay {
     margin-right: 40px;
   }
+  
 }
