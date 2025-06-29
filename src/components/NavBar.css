@@ -83,14 +83,14 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive styles */
+/* Responsive mobile styles */
 
 @media (max-width: 768px) {
   .navbar-links {
     position: absolute;
     top: 80px; /* height of navbar + some */
     right: 0;
-    background-color: #5b5a5b;
+    background-color: #956c95;
     width: 100%;
     max-height:0;
     overflow: hidden;
@@ -99,7 +99,8 @@
     justify-content: center;  /* horizontal center */
     align-items: center;      /* vertical center */
     transition: max-height 0.3s ease;
-  }
+    border-radius: 3px;
+}
 
   .navbar-links.active {
     max-height: 400px; /* enough height for links */
@@ -108,7 +109,6 @@
   .navbar-links a {
     padding: 1rem;
     border-top: 1px solid #444;
-    width: 100%;       /* full width to center text */
     text-align: center; /* center the link text */
   }
 

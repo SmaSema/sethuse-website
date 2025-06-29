@@ -1,0 +1,68 @@
+h1 {
+  color: #cfcfcf;
+  margin-bottom: 16px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('/src/assets/hero.jpg');
+  background-position: center;
+  background-size: cover; /* Add this too */
+  background-repeat: no-repeat; /* Optional, but often useful */
+  height: 50vh;
+  width: 100%; /* Ensure it fills the full screen width */
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+}
+
+
+.hero-overlay {
+  background: linear-gradient(to right, rgba(65, 58, 67, 0.515), rgba(118, 63, 111, 0));
+  padding: 40px;
+  border-radius: 12px;
+  margin-left: 40px;
+}
+
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.3s;
+}
+
+button.primary {
+  background-color: #0f97b9;
+  color: #000;
+}
+
+button.primary:hover {
+  background-color: #fbf729;
+}
+
+button.secondary {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+}
+
+button.secondary:hover {
+  background-color: #eee;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    margin-right: 40px;
+  }
+}

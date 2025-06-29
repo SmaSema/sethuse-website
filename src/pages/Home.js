@@ -1,10 +1,10 @@
 // src/pages/Home.js
 import React from 'react';
+import Hero from '../components/Hero';
 
 const Home = () => (
   <div>
-    <h1>Welcome to Sethuse Community Haven</h1>
-    <p>This is your homepage content.</p>
+    <Hero />
   </div>
 );
 
