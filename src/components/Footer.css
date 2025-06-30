@@ -85,6 +85,13 @@
   color: #8e24aa;
 }
 
+.footer-address {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #3a3838;
+}
 
 @media (max-width: 768px) {
   .footer-container {

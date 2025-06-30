@@ -64,7 +64,7 @@ button.secondary:hover {
 @media (max-width: 768px) {
   .hero-overlay {
     margin-right: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   
 }
