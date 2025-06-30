@@ -2,6 +2,9 @@
 
 import React from 'react';
 import './Footer.css';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { SiTiktok } from 'react-icons/si';
+
 
 function Footer() {
   return (
@@ -26,14 +29,20 @@ function Footer() {
 
         {/* Right: Social media */}
         <div className="footer-social">
-          <h3>Follow Us</h3>
-          <div className="social-icons">
-            <a href="#"><span>🌐</span></a>
-            <a href="#"><span>📘</span></a>
-            <a href="#"><span>🐦</span></a>
-            <a href="#"><span>📸</span></a>
-          </div>
+        <h3>Follow Us</h3>
+        <div className="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100092553245300#" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF size={20} />
+            </a>
+            <a href="https://www.tiktok.com/search?q=sethuse%20community%20haven&t=1751316789756" target="_blank" rel="noopener noreferrer">
+            <SiTiktok size={20} />
+            </a>
+            <a href="https://www.instagram.com/sethuse_community_haven_npo/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={20} />
+            </a>
         </div>
+        </div>
+
       </div>
 
       <div className="footer-bottom">

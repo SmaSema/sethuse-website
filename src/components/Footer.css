@@ -69,6 +69,23 @@
   padding-top: 1rem;
 }
 
+.footer-social .social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.footer-social .social-icons a {
+  color: #6a1b9a;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #8e24aa;
+}
+
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
