@@ -1,0 +1,42 @@
+.about-preview {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically center */
+  height: 30vh;           /* take full viewport height */
+  background-color: #f9f9f9; /* optional: background color */
+  text-align: center;      /* center text inside */
+  padding-bottom: 30px;
+}
+
+.about-preview-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.about-preview a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 10px;
+  color: #6a1b9a; /* Text color */
+  border: 2px solid #6a1b9a; /* Colored border */
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-preview a:hover {
+  background-color: #6a1b9a;
+  color: white;
+}
+
+/* Adjust height on mobile devices */
+@media (max-width: 768px) {
+  .about-preview {
+    height: auto;           /* Let the content determine height */
+    padding: 1px 20px;     /* Add vertical spacing */
+  }
+
+  .about-preview-content {
+    padding: 1.5rem;
+  }
+}
