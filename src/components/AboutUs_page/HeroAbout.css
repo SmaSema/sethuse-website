@@ -27,12 +27,7 @@
   z-index: 1;
 }
 
-.hero .overlay h1,
-.hero .overlay p {
-  z-index: 2;
-  margin: 0.5rem 0;
-}
-
+/*About Us Title*/
 .page-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -40,6 +35,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 2;
+}
+
+.hero .overlay h1,
+.hero .overlay p {
+  z-index: 2;
+  margin: 0.5rem 0;
 }
 
 
