@@ -7,6 +7,7 @@ const HeroAbout = () => {
   return (
     <section className="hero">
       <div className="overlay">
+        <h2 className="page-title">About Us</h2>
         <h1>Building Hope, One Community at a Time</h1>
         <p>We empower and uplift through connection, care, and shared purpose.</p>
       </div>
