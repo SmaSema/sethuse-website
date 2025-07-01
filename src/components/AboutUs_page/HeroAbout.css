@@ -33,3 +33,11 @@
   z-index: 2;
   margin: 0.5rem 0;
 }
+
+/* Responsive padding for mobile */
+@media (max-width: 768px) {
+  .hero .overlay {
+    padding: 0.5rem;
+    margin-right: 60px;
+}
+}
