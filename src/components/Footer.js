@@ -25,7 +25,7 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">Work</a></li>
+            <li><a href="/about">About Us</a></li>
             <li><a href="/work">Programs</a></li>
             <li><a href="/donate">Donate</a></li>
           </ul>
