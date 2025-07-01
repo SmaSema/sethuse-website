@@ -1,0 +1,56 @@
+/* Container for the mission section */
+.mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Text side of the mission section */
+.mission-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Image side of the mission section */
+.mission-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mission {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-image,
+  .mission-text {
+    width: 100%;
+  }
+}
