@@ -5,6 +5,7 @@ const AboutPreview = () => (
   <section className="about-preview">
     <div className="about-preview-content">
       <h2>About Us</h2>
+      <hr className="divider" />
       <p>
         We are on a mission to create a haven of support 
         and empowerment for those in need. Through collaborative 

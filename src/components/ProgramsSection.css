@@ -9,7 +9,15 @@
 .programs-title {
   font-size: 2rem;
   color: #222;
-  margin-bottom: 40px; /* Space below the title */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.divider-work {
+  width: 80px;
+  height: 4px;
+  background-color: #6a1b9a; /* Matches the accent color */
+  border: none;
+  margin: 10px auto 30px; /* Spacing around the line */
 }
 
 /* Grid Layout for Program Cards */

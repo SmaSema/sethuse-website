@@ -25,6 +25,7 @@ const programs = [
 const ProgramsSection = () => (
   <section className="programs-section">
     <h2 className="programs-title">Our Work</h2>
+          <hr className="divider-work" />
     <div className="programs-grid">
       {programs.map((program, index) => (
         <div className="program-card" key={index}>

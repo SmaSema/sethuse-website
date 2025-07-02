@@ -2,20 +2,30 @@
   display: flex;
   justify-content: center; /* horizontally center */
   align-items: center;     /* vertically center */
-  height: 30vh;           /* take full viewport height */
+  height: 40vh;           /* take full viewport height */
   background-color: #f9f9f9; /* optional: background color */
   text-align: center;      /* center text inside */
   padding-bottom: 30px;
 }
 
 .about-preview-content {
-  max-width: 600px;
+  max-width: 700px;
   padding: 2rem;
 }
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 10px;
 }
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #6a1b9a; /* Matches the accent color */
+  border: none;
+  margin: 10px auto 20px; /* Spacing around the line */
+}
+
 
 .about-preview a {
   display: inline-block;
