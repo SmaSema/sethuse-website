@@ -1,0 +1,24 @@
+/* Core Values Grid */
+.core-values {
+  background-color: #fef7ec;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.core-values h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.core-values-grid div {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
