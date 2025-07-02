@@ -18,11 +18,12 @@
   gap: 5px; /* Reduced spacing between cards */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
   justify-items: center; /* Center each card horizontally */
+  
 }
 
 /* Individual Program Card Styling */
 .program-card {
-  background-color: #f4f3f353;
+  background-color: #e5e3e3a5;
   border-radius: 12px;
   padding: 4px 16px; /* Slightly reduced padding */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -37,6 +38,7 @@
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
+  margin-top: 10px;
   margin-bottom: 12px; /* Slightly less space under the image */
 }
 
