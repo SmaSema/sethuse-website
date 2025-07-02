@@ -1,19 +1,29 @@
 /* Core Values Grid */
 .core-values {
   background-color: #fef7ec;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
 .core-values h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
+}
+
+/*Line Under*/
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #6a1b9a; /* Matches the accent color */
+  border: none;
+  margin: 10px auto 20px; /* Spacing around the line */
 }
 
 .core-values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .core-values-grid div {
@@ -21,4 +31,5 @@
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
 }

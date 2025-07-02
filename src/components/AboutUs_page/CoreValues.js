@@ -23,6 +23,7 @@ const CoreValues = () => {
   return (
     <section className="core-values">
       <h2>Our Core Values</h2>
+      <hr className="divider" />
       <div className="core-values-grid">
         {coreValues.map((value, index) => (
           <div key={index}>

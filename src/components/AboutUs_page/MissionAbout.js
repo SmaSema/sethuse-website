@@ -9,6 +9,7 @@ const MissionSection = () => {
     <section className="mission">
       <div className="mission-text">
         <h2>Our Mission</h2>
+        <hr className="divider" />
         <p>
           Sethuse Community Haven is on a mission to create a 
           haven of support and empowerment for those in need. 
