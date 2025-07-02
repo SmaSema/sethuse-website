@@ -4,7 +4,7 @@ import './AboutPreview.css';
 const AboutPreview = () => (
   <section className="about-preview">
     <div className="about-preview-content">
-      <h1>About Us</h1>
+      <h2>About Us</h2>
       <p>
         We are on a mission to create a haven of support 
         and empowerment for those in need. Through collaborative 
