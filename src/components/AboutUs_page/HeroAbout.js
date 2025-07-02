@@ -5,7 +5,7 @@ import '../AboutUs_page/HeroAbout.css';
 
 const HeroAbout = () => {
   return (
-    <section className="hero">
+    <section className="hero2">
       <div className="overlay">
         <h2 className="page-title">About Us</h2>
         <h1>Building Hope, One Community at a Time</h1>

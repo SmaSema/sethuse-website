@@ -49,8 +49,10 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Sethuse Community Haven. All rights reserved.</p>
-      </div>
+  <p>&copy; {new Date().getFullYear()} Sethuse Community Haven. All rights reserved.</p>
+  <p>Reg. No: NPO 290-151 | Established: 2023</p>
+</div>
+
     </footer>
   );
 }

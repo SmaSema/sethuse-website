@@ -1,5 +1,5 @@
 /* Hero Section */
-.hero {
+.hero2 {
   background-image: url('/src/assets/hero-about.jpg');
   background-size: cover;
   background-position: center;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-.hero .overlay {
+.hero2 .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,8 +37,8 @@
   z-index: 2;
 }
 
-.hero .overlay h1,
-.hero .overlay p {
+.hero2 .overlay h1,
+.hero2 .overlay p {
   z-index: 2;
   margin: 0.5rem 0;
 }
@@ -46,7 +46,7 @@
 
 /* Responsive padding for mobile */
 @media (max-width: 768px) {
-  .hero .overlay {
+  .hero2 .overlay {
     padding: 0.5rem;
     margin-right: 60px;
 }
