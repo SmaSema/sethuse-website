@@ -20,6 +20,7 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
+  text-align: center; /* Center text and divider */
 }
 
 /*Line Under*/
@@ -30,6 +31,7 @@
   border: none;
   margin: 10px auto 20px; /* Spacing around the line */
 }
+
 
 .mission-text p {
   font-size: 1.1rem;
