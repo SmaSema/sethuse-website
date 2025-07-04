@@ -1,16 +1,14 @@
 // src/pages/Work.js
 import React from 'react';
-
-const OurWork = () => (
-  <div>
-    <h1>Our Work</h1>
-    <ul>
-      <li>Women Empowerment Workshops</li>
-      <li>Men Empowerment Sessions</li>
-      <li>Youth Skills Training</li>
-      <li>Community Wellness Days</li>
-    </ul>
-  </div>
-);
+import HeroWork from '../components/OurWork_page/HeroWork';
+import ProgramsWork from '../components/OurWork_page/ProgramsWork'
+const OurWork = () => {
+  return (
+    <>
+      <HeroWork />
+      <ProgramsWork />
+    </>
+  );
+};
 
 export default OurWork;

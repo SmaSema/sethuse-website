@@ -1,0 +1,36 @@
+.programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap:6rem;
+  margin: 4rem 4rem;
+}
+
+.program-card {
+  background-color: #fff9f4;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.05);
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.program-card h3 {
+  margin-top: 1rem;
+  color: #3d2e26;
+  font-size: 1.3rem;
+}
+
+.program-card p {
+  color: #5c5046;
+  font-size: 0.95rem;
+}

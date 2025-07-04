@@ -1,0 +1,29 @@
+.header-block {
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;     /* Horizontally center all children */
+  justify-content: center; /* Vertically center if container has a height */
+  text-align: center;      /* Optional: center text */
+  padding: 2rem 1rem;      /* Optional: spacing */
+}
+
+
+.header-block h4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-block p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.explore-btn {
+  background-color: #f68b1f;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
