@@ -1,7 +1,7 @@
 /* Core Values Grid */
 .core-values {
   background-color: #fef7ec;
-  padding: 3rem 2rem;
+  padding: 2rem 5rem;
   text-align: center;
 }
 
@@ -22,8 +22,8 @@
 .core-values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 6rem;
+  margin-top: 4rem;
 }
 
 .core-values-grid div {

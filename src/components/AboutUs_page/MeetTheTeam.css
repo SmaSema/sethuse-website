@@ -1,6 +1,6 @@
 .meet-the-team {
   background-color: #e5e3e3;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 4rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   margin-left: 3rem;
   margin-right: 2rem;
