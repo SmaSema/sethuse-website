@@ -1,0 +1,20 @@
+.objectives {
+  padding: 2rem 1rem;
+  background-color: #f9f4ef;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
+  gap: 1.5rem;
+}
+.objective-card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.objective-card:hover {
+  transform: translateY(-4px);
+}
