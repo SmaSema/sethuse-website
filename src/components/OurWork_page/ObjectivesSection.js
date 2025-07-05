@@ -16,7 +16,8 @@ const objectives = [
 export default function ObjectivesSection() {
   return (
     <section className="objectives">
-      <h2>Our Guiding Objectives</h2>
+      <h5>Our Guiding Objectives</h5>
+      <hr className="divider" />
       <div className="objectives-grid">
         {objectives.map((obj, index) => (
           <div key={index} className="objective-card">

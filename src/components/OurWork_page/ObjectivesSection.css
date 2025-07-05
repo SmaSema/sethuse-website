@@ -1,3 +1,18 @@
+h5 {
+    margin-top: 1rem;
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*Line Under*/
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #6a1b9a; /* Matches the accent color */
+  border: none;
+  margin: 10px auto 20px; /* Spacing around the line */
+}
+
 .objectives {
   padding: 2rem 1rem;
   background-color: #f9f4ef;
@@ -6,15 +21,32 @@
 .objectives-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 .objective-card {
   padding: 1rem;
   background-color: white;
+  max-width: 320px; 
+  margin: 0 auto; /* Center the card within the column */
+
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 .objective-card:hover {
   transform: translateY(-4px);
+}
+
+/*Mobile*/
+@media (max-width: 992px) {
+  .objectives-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .objectives-grid {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
 }
