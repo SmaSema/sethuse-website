@@ -41,7 +41,8 @@ const OurWork = () => {
       <HeroWork />
       <ObjectivesSection />
       <section className="projects">
-        <h2>Highlights of Our Work</h2>
+        <h5>Highlights of Our Work</h5>
+        <hr className="divider" />
         {workData.map((work, idx) => (
           <ProjectCard key={idx} {...work} />
         ))}
