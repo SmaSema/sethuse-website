@@ -3,6 +3,7 @@ import React from 'react';
 import HeroWork from '../components/OurWork_page/HeroWork';
 import ObjectivesSection from '../components/OurWork_page/ObjectivesSection';
 import ProjectCard from '../components/OurWork_page/ProjectCard';
+import Testimonial from '../components/OurWork_page/Testimonial';
 
 const workData = [
   {
@@ -39,7 +40,9 @@ const OurWork = () => {
   return (
     <>
       <HeroWork />
+
       <ObjectivesSection />
+      
       <section className="projects">
         <h5>Highlights of Our Work</h5>
         <hr className="divider" />
@@ -47,6 +50,8 @@ const OurWork = () => {
           <ProjectCard key={idx} {...work} />
         ))}
       </section>
+
+      <Testimonial />
     </>
   );
 };
