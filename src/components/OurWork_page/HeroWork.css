@@ -5,6 +5,7 @@
   justify-content: center; /* Vertically center if container has a height */
   text-align: center;      /* Optional: center text */
   padding: 2rem 1rem;      /* Optional: spacing */
+  background-color: #e5e3e3b6;
 }
 
 
