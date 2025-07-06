@@ -1,3 +1,8 @@
+.projects {
+  padding: 2rem 1rem;
+  background-color: #e5e3e3b6;
+}
+
 /*Line Under*/
 .divider {
   width: 80px;
@@ -7,10 +12,6 @@
   margin: 10px auto 20px; /* Spacing around the line */
 }
 
-.projects {
-  padding: 2rem 1rem;
-  margin-top: 1rem;
-}
 .project-card {
   display: flex;
   flex-direction: column;
