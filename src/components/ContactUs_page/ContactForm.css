@@ -22,3 +22,7 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+.contact-form button:hover {
+    background-color: rgb(49, 184, 67);
+}
