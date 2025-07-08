@@ -3,6 +3,7 @@ import React from 'react';
 import ContactHeader from '../components/ContactUs_page/ContactHeader';
 import ContactForm from '../components/ContactUs_page/ContactForm';
 import AlternateContact from '../components/ContactUs_page/AlternateContact';
+import LocationMap from '../components/ContactUs_page/LocationMap'
 
 const ContactUs = () => {
   return (
@@ -10,6 +11,7 @@ const ContactUs = () => {
       <ContactHeader/>
       <ContactForm />
       <AlternateContact />
+      <LocationMap />
     </>
   );
 };
