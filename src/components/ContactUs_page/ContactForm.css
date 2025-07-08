@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
+  background-color: rgba(223, 191, 245, 0.356);
 }
 
 .contact-form input,
@@ -19,7 +20,7 @@
   border: none;
   padding: 0.75rem;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
