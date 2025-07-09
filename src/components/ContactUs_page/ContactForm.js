@@ -1,71 +1,36 @@
 import React, { useState } from 'react';
 import SuccessMessage from './SuccessMessage';
 import '../ContactUs_page/ContactForm.css';
+import contactImage from '/Users/smang/sethuse-website/src/assets/contact-side.png'
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred. Try again later.');
-    }
+    setSubmitted(true); // Simulate submission
   };
 
   return submitted ? (
-    <SuccessMessage />
-  ) : (
+  <SuccessMessage />
+) : (
+  <div className="contact-section">
+
+  <div className="form-image-wrapper">
     <form className="contact-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        rows="5"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required />
       <button type="submit">Send Message</button>
     </form>
-  );
+
+    <div className="form-side-image">
+      <img src={contactImage} alt="Contact Visual" />
+    </div>
+  </div>
+  </div>
+);
+
 };
 
 export default ContactForm;
