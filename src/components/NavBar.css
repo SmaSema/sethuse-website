@@ -121,5 +121,9 @@
   .mobile-menu-icon {
     display: flex;
   }
+
+  .donate-link {
+    margin-bottom: 1rem;
+  }
 }
 
