@@ -1,6 +1,12 @@
 /* CTA Banner */
+.cta-wrapper {
+  background-color: #fef7ec; /* light cream background */
+  padding: 1rem 1rem;
+}
+
+
 .cta-banner {
-  background-color: #fb6afdec;
+background: linear-gradient(to bottom, #fb6afdbd, #aa21add7);
   color: white;
   text-align: center;
   padding: 3rem 2rem;
