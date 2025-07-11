@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutPreview.css';
+import '../Home_page/AboutPreview.css';
 
 const AboutPreview = () => (
   <section className="about-preview">

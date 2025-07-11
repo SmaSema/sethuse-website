@@ -1,8 +1,8 @@
 import React from 'react';
-import './ProgramsSection.css';
-import envImg from '../assets/Env Improvement.jpg';
-import youthImg from '../assets/Youth Dev.jpg';
-import empowerImg from '../assets/GBV awareness.jpg';
+import '../Home_page/ProgramsSection.css';
+import envImg from '/Users/smang/sethuse-website/src/assets/Env Improvement.jpg';
+import youthImg from '/Users/smang/sethuse-website/src/assets/Youth Dev.jpg';
+import empowerImg from '/Users/smang/sethuse-website/src/assets/GBV awareness.jpg';
 
 const programs = [
   {
