@@ -56,14 +56,7 @@
   background-color: #0f97b9;
 }
 
-@media (max-width: 768px) {
-  .active-link {
-    border-bottom: none;
-    font-weight: normal; /* Optional: reset bold style too */
-  }
-}
-
-/* Hamburger menu icon styles */
+/* Hamburger menu icon styles on Mobile Devices */
 .mobile-menu-icon {
   display: none;
   cursor: pointer;
@@ -85,18 +78,20 @@
 .rotate1 {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .fade {
   opacity: 0;
 }
-
 .rotate2 {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Responsive mobile styles */
-
 @media (max-width: 768px) {
+  .active-link {
+    border-bottom: none;
+    font-weight: normal; 
+  }
+
   .navbar-links {
     position: absolute;
     top: 80px; /* height of navbar + some */

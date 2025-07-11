@@ -45,7 +45,7 @@
 }
 
 
-/* Responsive padding for mobile */
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   .hero2 .overlay {
     padding: 0.5rem;

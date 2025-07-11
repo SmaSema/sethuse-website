@@ -1,10 +1,10 @@
 .about-preview {
   display: flex;
-  justify-content: center; /* horizontally center */
-  align-items: center;     /* vertically center */
-  height: 40vh;           /* take full viewport height */
-  background-color: #f9f9f9; /* optional: background color */
-  text-align: center;      /* center text inside */
+  justify-content: center; 
+  align-items: center;     
+  height: 40vh;           
+  background-color: #f9f9f9; 
+  text-align: center;      
   padding-bottom: 30px;
 }
 
@@ -21,9 +21,9 @@ h2 {
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
+  background-color: #6a1b9a; 
   border: none;
-  margin: 10px auto 20px; /* Spacing around the line */
+  margin: 10px auto 20px; 
 }
 
 
@@ -32,7 +32,7 @@ h2 {
   margin-top: 10px;
   padding: 10px 10px;
   color: #6a1b9a; /* Text color */
-  border: 2px solid #6a1b9a; /* Colored border */
+  border: 2px solid #6a1b9a; 
   text-decoration: none;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -43,11 +43,11 @@ h2 {
   color: white;
 }
 
-/* Adjust height on mobile devices */
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   .about-preview {
     height: auto;           /* Let the content determine height */
-    padding: 1px 20px;     /* Add vertical spacing */
+    padding: 1px 20px;    
   }
 
   .about-preview-content {

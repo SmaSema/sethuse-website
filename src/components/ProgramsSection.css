@@ -1,8 +1,8 @@
 /* Our Work Section Container */
 .programs-section {
-  padding: 20px 140px; /* Space around the section */
-  background-color: #fff; /* White background */
-  text-align: center; /* Center align text */
+  padding: 20px 140px; 
+  background-color: #fff; 
+  text-align: center; 
   margin-bottom: 3rem;
 }
 
@@ -10,35 +10,34 @@
 .programs-title {
   font-size: 2rem;
   color: #222;
-  margin-bottom: 10px; /* Space below the title */
+  margin-bottom: 10px; 
 }
 
 .divider-work {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
+  background-color: #6a1b9a; 
   border: none;
-  margin: 10px auto 30px; /* Spacing around the line */
+  margin: 10px auto 30px;
 }
 
 /* Grid Layout for Program Cards */
 .programs-grid {
   display: grid;
-  gap: 5px; /* Reduced spacing between cards */
+  gap: 5px; 
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
-  justify-items: center; /* Center each card horizontally */
-  
+  justify-items: center; 
 }
 
 /* Individual Program Card Styling */
 .program-card {
   background-color: #e5e3e3a5;
   border-radius: 12px;
-  padding: 4px 16px; /* Slightly reduced padding */
+  padding: 4px 16px; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
-  max-width: 290px; /* Slightly narrower card */
+  max-width: 290px; 
 }
 
 /* Program Image Styling */
@@ -48,36 +47,32 @@
   object-fit: cover;
   border-radius: 8px;
   margin-top: 10px;
-  margin-bottom: 12px; /* Slightly less space under the image */
+  margin-bottom: 12px; 
 }
 
-/* Hover Effects on Cards */
 .program-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Optional Icon (if used) */
 .program-icon {
   font-size: 2.5rem;
   margin-bottom: 16px;
   display: block;
 }
 
-/* Label Under Image */
 .program-label {
   font-size: 1.1rem;
   color: #444;
 }
 
-/*program description*/
 .program-description {
   font-size: 0.95rem;
   color: #666;
   margin-top: 8px;
 }
 
-/* "View More" Button Section */
+/* View More Button Section */
 .view-more-container {
   text-align: center;
   margin-top: 50px;
@@ -103,13 +98,13 @@
   margin-top: 8px;
 }
 
-/* Responsive spacing between cards on mobile devices */
+/* Responsive mobile styles */
 @media (max-width: 768px) {
   .program-card {
-    margin-bottom: 20px; /* Adds vertical spacing between stacked cards */
+    margin-bottom: 20px; 
   }
 
   .programs-section {
-    padding: 20px 40px; /* Reduce horizontal padding for small screens */
+    padding: 20px 40px; 
   }
 }

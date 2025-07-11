@@ -55,7 +55,7 @@
   color: #333;
 }
 
-/* Responsive: Equal left/right margins on mobile */
+/* Responsive styling for mobile */
 @media (max-width: 600px) {
   .team-grid {
     margin-left: 1rem;

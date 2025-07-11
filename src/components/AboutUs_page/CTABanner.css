@@ -1,12 +1,12 @@
 /* CTA Banner */
 .cta-banner {
-  background-color: #e828eb75;
+  background-color: #fb6afdec;
   color: white;
   text-align: center;
   padding: 3rem 2rem;
   margin: 4rem auto 0; /* Center horizontally and add top margin */
   margin-bottom: 4rem;
-  width: fit-content;
+  width: 700px;
   border-radius: 10px; /* optional: gives rounded edges */
 }
 
@@ -26,5 +26,15 @@
 }
 
 .cta-banner button:hover {
-  background-color: #fbdfb3;
+  background-color: #6af159;
+  color: rgb(4, 50, 58);
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .cta-banner {
+    max-width: fit-content;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 }

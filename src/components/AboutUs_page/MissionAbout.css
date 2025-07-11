@@ -53,7 +53,7 @@
   border-radius: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   .mission {
     flex-direction: column;

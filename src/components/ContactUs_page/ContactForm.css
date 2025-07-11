@@ -56,7 +56,7 @@
   margin-right: 0; /* Remove any default spacing */
 }
 
-
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   .form-image-wrapper {
     flex-direction: column;

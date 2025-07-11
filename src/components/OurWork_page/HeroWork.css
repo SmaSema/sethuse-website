@@ -1,13 +1,12 @@
 .header-block {
   display: flex;
-  flex-direction: column;  /* Stack items vertically */
-  align-items: center;     /* Horizontally center all children */
-  justify-content: center; /* Vertically center if container has a height */
-  text-align: center;      /* Optional: center text */
-  padding: 2rem 1rem;      /* Optional: spacing */
+  flex-direction: column;  
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;      
+  padding: 2rem 1rem;      
   background-color: #e5e3e3b6;
 }
-
 
 .header-block h4 {
   font-size: 2.5rem;
