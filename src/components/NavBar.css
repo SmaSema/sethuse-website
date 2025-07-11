@@ -56,7 +56,12 @@
   background-color: #0f97b9;
 }
 
-
+@media (max-width: 768px) {
+  .active-link {
+    border-bottom: none;
+    font-weight: normal; /* Optional: reset bold style too */
+  }
+}
 
 /* Hamburger menu icon styles */
 .mobile-menu-icon {
