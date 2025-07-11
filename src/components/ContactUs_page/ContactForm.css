@@ -7,7 +7,8 @@
   flex: 1;
   min-width: 350px;       /* Ensures it's not too narrow on smaller screens */
   max-width: 600px;       /* How wide it can get */
-  width: 100%;            
+  width: 100%;    
+  margin-left: -15rem;        
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -43,7 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 6rem;
   flex-wrap: wrap; /* stack on small screens */
 }
 
@@ -58,6 +59,10 @@
 
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
+  .contact-form {
+    margin-left: 0;
+  }
+
   .form-image-wrapper {
     flex-direction: column;
     align-items: center;
