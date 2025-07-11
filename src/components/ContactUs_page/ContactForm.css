@@ -6,8 +6,8 @@
 .contact-form {
   flex: 1;
   min-width: 350px;       /* Ensures it's not too narrow on smaller screens */
-  max-width: 500px;       /* Optional: limits how wide it can get */
-  width: 100%;            /* Ensures it takes full space within constraints */
+  max-width: 600px;       /* How wide it can get */
+  width: 100%;            
   border-radius: 8px;
   display: flex;
   flex-direction: column;
