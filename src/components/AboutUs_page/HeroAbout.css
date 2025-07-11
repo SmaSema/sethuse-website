@@ -49,6 +49,7 @@
 @media (max-width: 768px) {
   .hero2 .overlay {
     padding: 0.5rem;
+    padding-top: 140px;
     margin-right: 60px;
 }
 }

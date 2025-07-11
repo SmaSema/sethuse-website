@@ -33,3 +33,14 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .core-values {
+    padding: rem 1rem; /* Side padding */
+  }
+
+  .core-values-grid {
+    gap: 2rem; /* Vertical and horizontal spacing */
+    margin-top: 2rem; 
+  }
+}

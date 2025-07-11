@@ -9,12 +9,10 @@ const team = [
   },
   {
     name: 'Bridget Godlimpi',
-    role: 'Program Director',
     quote: '"I believe in creating spaces where everyone feels they belong."',
   },
   {
     name: 'Nzuzo Shelembe',
-    role: 'Health & Wellness Lead',
     quote: '"Empowering people starts with listening to their stories."',
   },
 ];
