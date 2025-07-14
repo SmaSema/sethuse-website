@@ -1,5 +1,4 @@
 /* src/components/NavBar.css */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,7 @@
   transition: color 0.3s ease;
 }
 
-/* Active link underline */
+/* Active OR Open link underline */
 .active-link {
   border-bottom: 3.3px solid #0f97b9; 
   font-weight: bold;
@@ -55,6 +54,13 @@
 .donate-link:hover {
   background-color: #0f97b9;
 }
+
+/* Active OR Open donate link */
+.donate-link.active-link {
+  border-bottom: none;
+  background-color: #0f97b9;
+}
+
 
 /* Hamburger menu icon styles on Mobile Devices */
 .mobile-menu-icon {
