@@ -1,19 +1,16 @@
 import React from 'react';
-import HeroSection from './HeroSection';
-import ImpactStories from './ImpactStories';
-import DonationOptions from './DonationOptions';
-import PaymentSection from './PaymentSection';
-import DonateFooter from './DonateFooter';
-import './DonatePage.css';
+import DonateHero from '../components/Donate_page/DonateHero';
+import ImpactStories from '../components/Donate_page/ImpactStories';
+import DonationOptions from '../components/Donate_page/DonationOptions';
+import PaymentSection from '../components/Donate_page/PaymentSection';
 
 const DonatePage = () => {
   return (
     <main className="donate-page">
-      <HeroSection />
+      <DonateHero />
       <ImpactStories />
       <DonationOptions />
       <PaymentSection />
-      <DonateFooter />
     </main>
   );
 };

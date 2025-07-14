@@ -1,0 +1,36 @@
+.donateHero {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;      
+  padding: 4rem 1rem;      
+  background-image: url('../../assets/donateHero3.jpg'); 
+  background-size: cover;        /* Ensures the image covers the whole section */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  background-color: rgba(229, 227, 227, 0.7); /* Fallback background color */
+  color: white; /* Optional: if the image is dark */
+}
+
+
+h6 {
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem; 
+}
+
+.donateHero p {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.donate-button, .ozow-button, .option-card button {
+  background-color: #d97706;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}

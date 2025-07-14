@@ -1,0 +1,25 @@
+.impact-stories, .donation-options, .payment-section {
+  margin: 2rem 0;
+}
+
+.stories-grid, .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.story-card, .option-card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.story-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
