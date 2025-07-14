@@ -1,24 +1,21 @@
-// src/pages/Donate.js
 import React from 'react';
+import HeroSection from './HeroSection';
+import ImpactStories from './ImpactStories';
+import DonationOptions from './DonationOptions';
+import PaymentSection from './PaymentSection';
+import DonateFooter from './DonateFooter';
+import './DonatePage.css';
 
-const Donate = () => (
-  <div>
-    <h1>Support Our Mission</h1>
-    <p>Your donation helps us empower communities through education, health, and development programs.</p>
-    <button
-      style={{
-        backgroundColor: '#28a745',
-        color: 'white',
-        padding: '10px 20px',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer'
-      }}
-      onClick={() => alert('Redirect to payment gateway or donation instructions')}
-    >
-      Donate Now
-    </button>
-  </div>
-);
+const DonatePage = () => {
+  return (
+    <main className="donate-page">
+      <HeroSection />
+      <ImpactStories />
+      <DonationOptions />
+      <PaymentSection />
+      <DonateFooter />
+    </main>
+  );
+};
 
-export default Donate;
+export default DonatePage;
