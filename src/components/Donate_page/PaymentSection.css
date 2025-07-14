@@ -1,0 +1,23 @@
+.ozow-button {
+  background-color: #b31eab;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ozow-button:hover {
+  background-color: #d97706;
+  transform: translateY(-3px) scale(1.03); /* Slight upward lift and scale */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ozow-button:focus {
+  outline: 2px solid #facc15;
+  outline-offset: 2px; /* Space between button and outline */
+}
