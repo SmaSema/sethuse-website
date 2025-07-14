@@ -16,8 +16,3 @@
   transform: translateY(-3px) scale(1.03); /* Slight upward lift and scale */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-
-.ozow-button:focus {
-  outline: 2px solid #facc15;
-  outline-offset: 2px; /* Space between button and outline */
-}
