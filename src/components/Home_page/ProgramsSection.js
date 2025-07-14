@@ -36,7 +36,7 @@ const ProgramsSection = () => (
       ))}
     </div>
     <div className="view-more-container">
-      <a href="/programs" className="view-more-button">View More</a>
+      <a href="/about" className="view-more-button">View More</a>
     </div>
   </section>
 );
