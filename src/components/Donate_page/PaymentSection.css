@@ -1,3 +1,12 @@
+.payment-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.payment-section h2 {
+    text-align: center;
+}
+
 .ozow-button {
   background-color: #b31eab;
   color: white;

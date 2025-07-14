@@ -1,3 +1,11 @@
+.donation-options {
+  margin: 2rem 0;
+}
+
+.donation-options h2 {
+    text-align: center;
+}
+
 .option-card button {
   background-color: #b31eab;
   color: white;
