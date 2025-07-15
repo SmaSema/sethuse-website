@@ -81,13 +81,15 @@ button {
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 56vh;
   }
 
   .hero-overlay {
+    background: linear-gradient(to bottom, rgba(65, 58, 67, 0.515), rgba(53, 25, 49, 0.473));
     margin-right: 40px;
     margin-bottom: 20px;
     margin-left: 0;
+    margin-right: 0;
     padding-top: 10px;
     padding-bottom: 20px;
   }
