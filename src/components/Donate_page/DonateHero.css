@@ -4,7 +4,7 @@
   align-items: center;     
   justify-content: center; 
   text-align: center;      
-  padding: 4rem 1rem;      
+  padding: 4rem 1rem;  
   background-image: url('../../assets/donateHero3.jpg'); 
   background-size: cover;        /* Ensures the image covers the whole section */
   background-position: center;   /* Centers the image */
