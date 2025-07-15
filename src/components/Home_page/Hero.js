@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Home_page/Hero.css';
 
 const Hero = () => (
@@ -7,8 +8,8 @@ const Hero = () => (
       <h1>Empowering Communities with Compassion and Purpose</h1>
       <p>Creating safe spaces, supporting growth, and celebrating resilience.</p>
       <div className="hero-buttons">
-        <button className="primary">Donate Now</button>
-        <button className="secondary">Get Involved</button>
+        <Link to="/donate" className="primary">Donate Now</Link>
+        <Link to="/contact" className="secondary">Get Involved</Link>
       </div>
     </div>
   </section>

@@ -1,9 +1,3 @@
-h1 {
-  color: #ffffff;
-  margin-bottom: 16px;
-  font-size: 35px;
-}
-
 /* Hero Section */
 .hero {
   background-image: url('/src/assets/hero.jpg');
@@ -20,7 +14,6 @@ h1 {
   text-align: left;
 }
 
-
 .hero-overlay {
   background: linear-gradient(to right, rgba(65, 58, 67, 0.515), rgba(118, 63, 111, 0));
   padding: 40px;
@@ -28,6 +21,15 @@ h1 {
   margin-left: 40px;
 }
 
+h1 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 35px;
+}
+
+.hero-overlay p {
+  font-size: 20px ;
+}
 
 .hero-buttons {
   margin-top: 20px;
@@ -43,29 +45,65 @@ button {
   transition: background 0.3s;
 }
 
-button.primary {
+/* Ensure Link buttons look the same as real buttons */
+.hero-buttons .primary,
+.hero-buttons .secondary {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 10px;
+  text-decoration: none;    /* Remove underline */
+  transition: background 0.3s;
+}
+
+.hero-buttons .primary {
   background-color: #0f97b9;
   color: #000;
 }
 
-button.primary:hover {
+.hero-buttons .primary:hover {
   background-color: #fbf729;
 }
 
-button.secondary {
+.hero-buttons .secondary {
   background-color: #fff;
   color: #444;
 }
 
-button.secondary:hover {
+.hero-buttons .secondary:hover {
   background-color: #cc64cc;
+  color: #fff;
 }
 
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
   .hero-overlay {
     margin-right: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
   }
   
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;   /* Stack buttons vertically */
+    align-items: center; 
+    gap: 0.5rem;
+  }
 }
