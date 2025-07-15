@@ -27,3 +27,12 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .header-block p {
+    font-size: 1rem;     /* Slightly smaller paragraph text */
+    max-width: 80%;     /* Ensure it doesn’t overflow or get restricted */
+  }
+
+}

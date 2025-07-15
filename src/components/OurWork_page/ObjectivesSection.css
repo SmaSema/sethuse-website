@@ -41,14 +41,13 @@ h5 {
 }
 
 /* Responsive styling for mobile */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .objectives-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
   }
-}
 
-@media (max-width: 600px) {
-  .objectives-grid {
-    grid-template-columns: 1fr; /* 1 per row on small screens */
+  .objective-card h3 {
+    text-align: center;
   }
 }
+
