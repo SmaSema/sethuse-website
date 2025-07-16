@@ -12,7 +12,7 @@ function Footer() {
       <div className="footer-container">
         {/* Left: Name and Address */}
         <div className="footer-logo">
-          <h2>Sethuse</h2>
+          <h2>Sethuse Community Haven</h2>
           <p>Empowering communities, transforming lives.</p>
           <div className="footer-address">
             <FaMapMarkerAlt size={16} style={{ marginRight: '8px' }} />
