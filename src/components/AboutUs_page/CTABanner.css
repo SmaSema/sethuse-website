@@ -4,16 +4,21 @@
   padding: 1rem 1rem;
 }
 
-
 .cta-banner {
-background: linear-gradient(to bottom, #fb6afdbd, #aa21add7);
-  color: white;
+  background-color: #ffffffd0;
+  color: rgb(26, 64, 112);
   text-align: center;
   padding: 3rem 2rem;
   margin: 4rem auto 0; /* Center horizontally and add top margin */
   margin-bottom: 4rem;
   width: 700px;
   border-radius: 10px; /* optional: gives rounded edges */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* dark shadow: no sideway shift, appear below, soft */
+  transition: transform 0.3s ease; /* for smooth hover movement */
+}
+
+.cta-banner:hover {
+  transform: translateY(-3px); /* Moves up by 5px on hover */
 }
 
 .cta-banner h2 {
@@ -22,8 +27,8 @@ background: linear-gradient(to bottom, #fb6afdbd, #aa21add7);
 }
 
 .cta-banner button {
-  background-color: white;
-  color: #aa21add7;
+  background-color: #aa21add7;
+  color: #ffffffd7;
   border: none;
   padding: 0.8rem 1.5rem;
   font-weight: bold;
