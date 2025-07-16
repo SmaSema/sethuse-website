@@ -8,9 +8,7 @@ const CTABanner = () => {
         <h2>Be Part of the Change</h2>
         <hr className="divider" />
         <p>Your support helps us grow stronger communities.</p>
-        <button onClick={() => window.location.href = '/donate'}>
-          Donate Now
-        </button>
+        <button onClick={() => window.location.href = '/contact'}>Volunteer</button>
       </div>
     </section>
 

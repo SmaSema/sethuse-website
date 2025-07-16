@@ -9,7 +9,6 @@
   background-size: cover;        /* Ensures the image covers the whole section */
   background-position: center;   /* Centers the image */
   background-repeat: no-repeat;  /* Prevents tiling */
-  background-color: rgba(229, 227, 227, 0.7); /* Fallback background color */
   color: white; /* Optional: if the image is dark */
 }
 

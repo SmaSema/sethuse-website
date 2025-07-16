@@ -28,7 +28,7 @@
 
 .cta-banner button {
   background-color: #aa21add7;
-  color: #ffffffd7;
+  color: #ffffff;
   border: none;
   padding: 0.8rem 1.5rem;
   font-weight: bold;
@@ -37,8 +37,8 @@
 }
 
 .cta-banner button:hover {
-  background-color: #6af159;
-  color: rgb(4, 50, 58);
+  background-color: #0f97b9;
+  color: rgb(255, 255, 255);
 }
 
 /* Responsive styling for mobile */
