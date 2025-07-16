@@ -5,7 +5,8 @@
   justify-content: center; 
   text-align: center;      
   padding: 4rem 1rem;  
-  background-image: url('../../assets/donateHero3.jpg'); 
+  background: linear-gradient(rgba(95, 92, 92, 0.151), rgba(219, 218, 218, 0.274)), 
+              url('../../assets/donateHero3.jpg');
   background-size: cover;        /* Ensures the image covers the whole section */
   background-position: center;   /* Centers the image */
   background-repeat: no-repeat;  /* Prevents tiling */
