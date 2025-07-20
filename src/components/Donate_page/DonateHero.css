@@ -44,3 +44,12 @@ h6 {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+  .donateHero {
+    background: linear-gradient(rgba(95, 92, 92, 0.151), rgba(219, 218, 218, 0.5)), 
+              url('../../assets/donateHero3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
