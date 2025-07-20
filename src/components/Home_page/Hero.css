@@ -81,7 +81,7 @@ button {
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
   .hero {
-    height: 56vh;
+    height: 70vh;
   }
 
   .hero-overlay {

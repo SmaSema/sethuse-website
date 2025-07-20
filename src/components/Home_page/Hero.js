@@ -5,7 +5,7 @@ import '../Home_page/Hero.css';
 const Hero = () => (
   <section className="hero">
     <div className="hero-overlay">
-      <h1>Empowering Communities with Compassion and Purpose</h1>
+      <h1>We Make a Living by What We Get, But We Make a Life by What We Give</h1>
       <p>Creating safe spaces, supporting growth, and celebrating resilience.</p>
       <div className="hero-buttons">
         <Link to="/donate" className="primary">Donate Now</Link>
