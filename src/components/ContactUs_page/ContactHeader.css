@@ -6,3 +6,11 @@
   color: #2d2d2d;
   font-family: 'Roboto', sans-serif;
 }
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+  .contact-header p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

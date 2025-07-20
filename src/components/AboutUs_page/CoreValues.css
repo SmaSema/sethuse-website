@@ -37,11 +37,18 @@
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
   .core-values {
-    padding: rem 1rem; /* Side padding */
+    padding: 0 1rem; 
+    margin-top: -2rem;
   }
 
   .core-values-grid {
-    gap: 2rem; /* Vertical and horizontal spacing */
-    margin-top: 2rem; 
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .core-values h2 {
+    padding-top: 3rem;
   }
 }
+

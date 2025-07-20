@@ -59,7 +59,7 @@
 @media (max-width: 600px) {
   .team-grid {
     margin-left: 1rem;
-    margin-right: 3.5rem; /* Match left margin */
+    margin-right: 1rem; /* Match left margin */
   }
 
   .team-card {
