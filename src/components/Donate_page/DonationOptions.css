@@ -1,9 +1,11 @@
 .donation-options {
-  margin: 2rem 0;
+  margin-top: -27px;
+  background-color: #faefe3;
 }
 
 .donation-options h2 {
-    text-align: center;
+  padding-top: 40px;
+  text-align: center;
 }
 
 .option-card button {
