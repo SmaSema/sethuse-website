@@ -44,6 +44,11 @@ h5 {
 @media (max-width: 768px) {
   .objectives-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+    gap: 0.5rem;
+  }
+
+  .objective-card {
+    max-width: 170px;
   }
 
   .objective-card h3 {

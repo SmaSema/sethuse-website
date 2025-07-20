@@ -2,7 +2,7 @@ import './PaymentSection.css';
 
 const PaymentSection = () => (
   <section className="payment-section" id="payment-section">
-    <h2>Secure Payment</h2>
+    <h2>Secure Payment with Ozow</h2>
     
     <p>
       We value your generosity—and your safety. That’s why we use <strong>trusted platforms like Ozow</strong> to process donations securely and seamlessly.

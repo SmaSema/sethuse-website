@@ -1,14 +1,22 @@
+/* Apply consistent box-sizing for layout reliability */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .contact-section {
   background-color: rgba(223, 191, 245, 0.356);
   padding: 4rem 1rem;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .contact-form {
   flex: 1;
-  min-width: 350px;       /* Ensures it's not too narrow on smaller screens */
-  max-width: 600px;       /* How wide it can get */
-  width: 100%;    
-  margin-left: -15rem;        
+  min-width: 0;              /* Prevent overflow */
+  max-width: 600px;          /* Maximum width on larger screens */
+  width: 100%;
+  margin-left: -15rem;       /* Offsets form on large screens */
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -17,13 +25,13 @@
   background-color: rgba(223, 191, 245, 0.445);
 }
 
-
 .contact-form input,
 .contact-form textarea {
   border: 1px solid #ccc;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 1rem;
+  width: 100%; /* Ensures inputs are responsive */
 }
 
 .contact-form button {
@@ -34,10 +42,11 @@
   font-size: 1rem;
   border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: rgb(49, 184, 67);
+  background-color: rgb(49, 184, 67);
 }
 
 .form-image-wrapper {
@@ -45,7 +54,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 6rem;
-  flex-wrap: wrap; /* stack on small screens */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
 }
 
 .form-side-image img {
@@ -54,19 +63,23 @@
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  margin-right: 0; /* Remove any default spacing */
+  margin-right: 0;
 }
 
-/* Responsive styling for mobile */
+/* Responsive styling for mobile devices */
 @media (max-width: 768px) {
   .contact-form {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .form-image-wrapper {
     flex-direction: column;
     align-items: center;
-    padding-right: 2.5rem;
+    padding: 0 1.5rem;
   }
 
   .form-side-image img {

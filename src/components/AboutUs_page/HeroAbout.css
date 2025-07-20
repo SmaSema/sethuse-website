@@ -42,6 +42,7 @@
 .hero2 .overlay p {
   z-index: 2;
   margin: 0.5rem 0;
+  padding-right: 1rem;
 }
 
 
