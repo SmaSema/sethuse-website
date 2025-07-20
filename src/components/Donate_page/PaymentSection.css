@@ -1,18 +1,30 @@
 .payment-section {
-  margin: 2rem 0;
+  margin-top: -27px;
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(223, 191, 245, 0.445);
 }
 
 .payment-section h2 {
-    text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
 }
+
+.payment-section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 .ozow-button {
   background-color: #b31eab;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
   border-radius: 4px;
   font-size: 1rem;
@@ -24,4 +36,21 @@
   background-color: #d97706;
   transform: translateY(-3px) scale(1.03); /* Slight upward lift and scale */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ozow-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ozow-features li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
 }
