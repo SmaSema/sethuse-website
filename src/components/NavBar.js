@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';  // Changed from Link to NavLink
+import React, { useState, useEffect } from 'react';  // added useEffect
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import Logo from '../assets/Logo.png';
 
 const NavBar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);  // new state
 
   const toggleMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -14,8 +15,19 @@ const NavBar = () => {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // change 50 to your scroll threshold
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-logo">
         <NavLink to="/" onClick={closeMenu}>
           <img src={Logo} alt="Sethuse Logo" className="logo" />

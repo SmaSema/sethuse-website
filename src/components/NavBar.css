@@ -7,7 +7,10 @@
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 10;
+  position: sticky;
+  top: 0;
 }
+
 
 .navbar-logo img.logo {
   height: 60px;
@@ -93,6 +96,16 @@
 
 /* Responsive mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(223, 123, 241, 0.479); /* Semi-transparent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
   .active-link {
     border-bottom: none;
     font-weight: normal; 

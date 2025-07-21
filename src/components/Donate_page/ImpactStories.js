@@ -16,10 +16,10 @@ const images = {
 const ImpactStories = () => (
   <section className="impact-stories">
     <h2>How Your Donation Helps</h2>
-    
-    <div className="stories-grid"  data-aos="fade-up">
+
+    <div className="stories-grid">
       {['Education', 'Health', 'Development'].map((title, index) => (
-        <div className="story-card" key={index}>
+        <div className="story-card" key={index}  data-aos="fade-up">
           <img src={images[title]} alt={`${title} Program`} />
           <h3>{title}</h3>
           <p>

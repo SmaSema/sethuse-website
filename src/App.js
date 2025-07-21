@@ -11,6 +11,8 @@ import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
 import AOS from 'aos'; // Importing AOS library (for animation )
 import 'aos/dist/aos.css'; // Make sure to import AOS styles
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTop/ScrollToTopButton'; //Button
 
 function App() {
   useEffect(() => {
@@ -21,6 +23,8 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />  {/* Scroll to top on new-page open */}
+
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <NavBar />
         <main style={{ flex: 1 }}>
@@ -34,6 +38,8 @@ function App() {
         </main>
         <Footer />
       </div>
+
+      <ScrollToTopButton />
     </Router>
   );
 }
