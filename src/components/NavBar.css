@@ -11,7 +11,6 @@
   top: 0;
 }
 
-
 .navbar-logo img.logo {
   height: 60px;
 }
@@ -100,10 +99,19 @@
     position: sticky;
     top: 0;
   }
-  
+
+  .navbar-logo {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .navbar.scrolled .navbar-logo {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .navbar.scrolled {
-    background-color: rgba(223, 123, 241, 0.479); /* Semi-transparent */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent; 
+    box-shadow: none;
   }
 
   .active-link {
@@ -113,7 +121,7 @@
 
   .navbar-links {
     position: absolute;
-    top: 80px; /* height of navbar + some */
+    top: 80px; /* height of navbar */
     right: 0;
     background-color: #956c95;
     width: 100%;
@@ -128,7 +136,7 @@
 }
 
   .navbar-links.active {
-    max-height: 400px; /* enough height for links */
+    max-height: 400px; /* height for links */
   }
 
   .navbar-links a {
@@ -139,6 +147,11 @@
 
   .mobile-menu-icon {
     display: flex;
+  }
+
+  /* Changing hamburger bar color on scroll */
+  .mobile-menu-icon.scrolled .bar {
+    background-color: #5b0c57; /* Purple */
   }
 
   .donate-link {

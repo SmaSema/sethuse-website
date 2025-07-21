@@ -42,7 +42,7 @@ const NavBar = () => {
         <NavLink to="/donate" onClick={closeMenu} className={({ isActive }) => isActive ? 'active-link donate-link' : 'donate-link'}>Donate</NavLink>
       </div>
 
-      <div className="mobile-menu-icon" onClick={toggleMenu}>
+      <div className={`mobile-menu-icon ${scrolled ? 'scrolled' : ''}`} onClick={toggleMenu}>
         <div className={isMobileMenuOpen ? 'bar rotate1' : 'bar'}></div>
         <div className={isMobileMenuOpen ? 'bar fade' : 'bar'}></div>
         <div className={isMobileMenuOpen ? 'bar rotate2' : 'bar'}></div>
