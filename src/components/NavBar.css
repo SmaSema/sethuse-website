@@ -95,67 +95,88 @@
 
 /* Responsive mobile styles */
 @media (max-width: 768px) {
+  /* Make navbar stick to the top on mobile */
   .navbar {
     position: sticky;
     top: 0;
   }
 
+  /* Smooth transition for logo visibility */
   .navbar-logo {
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
+  /* Hide logo when scrolled down */
   .navbar.scrolled .navbar-logo {
     opacity: 0;
     visibility: hidden;
   }
 
+  /* Remove background and shadow on scroll */
   .navbar.scrolled {
     background-color: transparent; 
     box-shadow: none;
   }
 
+  /* Add background color and shadow when menu is open */
+  .navbar.menu-open {
+    background-color: #956c95; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+  /* Show logo again when menu is open, even if scrolled */
+  .navbar.menu-open .navbar-logo {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Reset active link styling on mobile for cleaner look */
   .active-link {
     border-bottom: none;
     font-weight: normal; 
   }
 
+  /* Mobile menu styles */
   .navbar-links {
     position: absolute;
     top: 80px; /* height of navbar */
     right: 0;
     background-color: #956c95;
     width: 100%;
-    max-height:0;
+    max-height: 0; /* collapsed by default */
     overflow: hidden;
     flex-direction: column;
     display: flex;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
     transition: max-height 0.3s ease;
-    border-radius: 3px;
-}
-
-  .navbar-links.active {
-    max-height: 400px; /* height for links */
+    border-radius: 1px;
   }
 
+  /* Expand menu when active */
+  .navbar-links.active {
+    max-height: 400px;
+  }
+
+  /* Style for each mobile nav link */
   .navbar-links a {
     padding: 1rem;
     border-top: 1px solid #444;
-    text-align: center; /* center the link text */
+    text-align: center;
   }
 
+  /* Show hamburger icon on mobile */
   .mobile-menu-icon {
     display: flex;
   }
 
-  /* Changing hamburger bar color on scroll */
+  /* Change hamburger icon bar color when scrolled */
   .mobile-menu-icon.scrolled .bar {
-    background-color: #5b0c57; /* Purple */
+    background-color: #5b0c57;
   }
 
+  /* Add spacing under the donate button on mobile */
   .donate-link {
     margin-bottom: 1rem;
   }
 }
-

@@ -27,7 +27,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-logo">
         <NavLink to="/" onClick={closeMenu}>
           <img src={Logo} alt="Sethuse Logo" className="logo" />
