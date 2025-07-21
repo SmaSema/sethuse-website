@@ -23,9 +23,9 @@
   justify-content: center;
 }
 
-.story-card, .option-card {
+.story-card {
   flex: 1 1 300px; /* Allows the card to grow and shrink, with a base width of 300px */
-  background-color: #fff;
+  background-color: #f0f0f0;
   border: 1px solid #ddd;
   padding: 1rem 0.1rem;       /* 1rem top/bottom, 0 left/right */
   border-radius: 8px;

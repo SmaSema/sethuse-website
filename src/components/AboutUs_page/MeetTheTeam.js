@@ -19,10 +19,10 @@ const team = [
 
 const MeetTheTeam = () => {
   return (
-    <section className="meet-the-team" data-aos="fade-right">
+    <section className="meet-the-team">
       <h2>Meet the Team</h2>
       <hr className="divider" />
-      <div className="team-grid">
+      <div className="team-grid" data-aos="fade-up">
         {team.map((member, index) => (
           <div className="team-card" key={index}>
             <h3>{member.name}</h3>

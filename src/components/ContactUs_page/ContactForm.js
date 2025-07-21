@@ -31,7 +31,7 @@ const ContactForm = () => {
   ) : (
     <div className="contact-section">
       <div className="form-image-wrapper">
-        <form ref={form} className="contact-form" onSubmit={handleSubmit}>
+        <form ref={form} className="contact-form"   data-aos="fade-left" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" rows="5" required />
