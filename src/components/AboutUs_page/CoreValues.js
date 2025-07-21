@@ -21,10 +21,10 @@ const coreValues = [
 
 const CoreValues = () => {
   return (
-    <section className="core-values" data-aos="fade-left">
+    <section className="core-values">
       <h2>Our Core Values</h2>
       <hr className="divider" />
-      <div className="core-values-grid">
+      <div className="core-values-grid" data-aos="fade-up">
         {coreValues.map((value, index) => (
           <div key={index}>
             <h3>{value.icon} {value.title}</h3>

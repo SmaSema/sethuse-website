@@ -19,7 +19,7 @@ const team = [
 
 const MeetTheTeam = () => {
   return (
-    <section className="meet-the-team">
+    <section className="meet-the-team" data-aos="fade-right">
       <h2>Meet the Team</h2>
       <hr className="divider" />
       <div className="team-grid">

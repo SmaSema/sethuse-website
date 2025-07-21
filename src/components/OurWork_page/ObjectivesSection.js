@@ -15,7 +15,7 @@ const objectives = [
 
 export default function ObjectivesSection() {
   return (
-    <section className="objectives">
+    <section className="objectives" data-aos="fade-right">
       <h5>Our Guiding Objectives</h5>
       <hr className="divider" />
       <div className="objectives-grid">
