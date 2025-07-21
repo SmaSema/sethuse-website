@@ -1,6 +1,6 @@
 // src/App.js
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -9,8 +9,14 @@ import AboutUs from './pages/AboutUs';
 import OurWork from './pages/OurWork';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Make sure to import AOS styles
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
