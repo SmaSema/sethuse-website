@@ -3,7 +3,8 @@ import '../Home_page/AboutPreview.css';
 
 const AboutPreview = () => (
   <section className="about-preview">
-    <div className="about-preview-content">
+
+    <div className="about-preview-content" data-aos="fade-up">
       <h2>About Us</h2>
       <hr className="divider" />
       <p>
@@ -15,6 +16,7 @@ const AboutPreview = () => (
       </p>
       <a href="/about">More About Us </a>
     </div>
+
   </section>
 );
 

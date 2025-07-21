@@ -23,7 +23,7 @@ const programs = [
 ];
 
 const ProgramsSection = () => (
-  <section className="programs-section">
+  <section className="programs-section" data-aos="fade-right">
     <h2 className="programs-title">Our Work</h2>
           <hr className="divider-work" />
     <div className="programs-grid">
@@ -35,6 +35,7 @@ const ProgramsSection = () => (
         </div>
       ))}
     </div>
+
     <div className="view-more-container">
       <a href="/about" className="view-more-button">View More</a>
     </div>

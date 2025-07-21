@@ -9,12 +9,14 @@ import AboutUs from './pages/AboutUs';
 import OurWork from './pages/OurWork';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
-import AOS from 'aos';
+import AOS from 'aos'; // Importing AOS library (for animation )
 import 'aos/dist/aos.css'; // Make sure to import AOS styles
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ 
+      duration: 1000, 
+      once: false });
   }, []);
 
   return (

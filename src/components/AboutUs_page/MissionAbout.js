@@ -6,7 +6,7 @@ import hikeImage from  '/Users/smang/sethuse-website/src/assets/Hike.jpg'
 
 const MissionSection = () => {
   return (
-    <section className="mission">
+    <section className="mission" data-aos="fade-right">
       <div className="mission-text">
         <h2>Our Mission</h2>
         <hr className="divider" />
