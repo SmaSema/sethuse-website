@@ -1,38 +1,52 @@
+/* 
+  Author: Smangalene Charles Sema
+  Date: 5 September 2025
+  Description:
+    Main styling for the root App component of the React application.
+    Handles layout, logo animation, header styling, and link appearance.
+*/
+
+/* Root App container */
 .App {
-  text-align: center;
+  text-align: center; /* Center all content horizontally */
 }
 
+/* Logo styling */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin;       /* Scales logo relative to viewport width */
+  pointer-events: none; /* Prevents accidental dragging or clicking */
 }
 
+/* Logo animation: only for users without reduced-motion preference */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Continuous spin */
   }
 }
 
+/* Header styling */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34;  /* Dark background for contrast */
+  min-height: 100vh;          /* Full viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;        /* Center items horizontally */
+  justify-content: center;    /* Center items vertically */
+  font-size: calc(10px + 2vmin); /* Responsive font sizing */
+  color: white;               /* White text for readability */
 }
 
+/* Link styling within App component */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Highlight links with React blue */
 }
 
+/* Keyframes for rotating logo animation */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg);   /* Start position */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Full rotation */
   }
 }

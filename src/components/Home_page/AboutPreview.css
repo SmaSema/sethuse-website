@@ -1,55 +1,73 @@
+/*
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the "About Us" preview section on the homepage. 
+                Includes container, content box, headings, divider, read-more link, 
+                and responsive adjustments for mobile devices.
+*/
+
+/* Main container for the About Preview section */
 .about-preview {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
-  height: 40vh;           
-  background-color: #f9f9f9; 
-  text-align: center;      
-  padding-bottom: 30px;
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  height: 40vh;             /* 40% of viewport height */
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: center;       /* Center text */
+  padding-bottom: 30px;     /* Space at the bottom */
 }
 
+/* Inner content container for text */
 .about-preview-content {
-  max-width: 700px;
-  padding: 2rem;
+  max-width: 700px; /* Limit width for readability */
+  padding: 2rem;    /* Inner spacing */
 }
 
+/* Section heading */
 h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
+/* Divider line under heading */
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; 
+  background-color: #6a1b9a; /* Purple accent color */
   border: none;
-  margin: 10px auto 20px; 
+  margin: 10px auto 20px;    /* Center and spacing */
 }
 
-
+/* Read More / Learn More link styling */
 .about-preview a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 10px;
-  color: #6a1b9a; /* Text color */
-  border: 2px solid #6a1b9a; 
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #6a1b9a; /* Purple text */
+  border: 2px solid #6a1b9a; /* Purple border */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 6px;         /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 }
 
+/* Hover effect for the Read More link */
 .about-preview a:hover {
-  background-color: #6a1b9a;
-  color: white;
+  background-color: #6a1b9a; /* Purple background */
+  color: white;               /* White text on hover */
 }
 
-/* Responsive styling for mobile */
+/* 
+   Responsive styling for mobile
+*/
 @media (max-width: 768px) {
+
+  /* Allow the container height to adjust automatically */
   .about-preview {
-    height: auto;           /* Let the content determine height */
+    height: auto;
     padding: 1px 20px;    
   }
 
+  /* Adjust inner content padding for small screens */
   .about-preview-content {
     padding: 1.5rem;
   }

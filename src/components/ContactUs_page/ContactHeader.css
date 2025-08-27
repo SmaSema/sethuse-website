@@ -1,16 +1,25 @@
+/* 
+   Author: Smangalene Charles Sema
+   Date: 27 August 2025
+   Description: Styles for the ContactHeader component. 
+                This component displays the page header for the 
+                Contact Us page with a tagline and introductory text.
+*/
+
+/* Container styling for the contact header */
 .contact-header {
-  text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: #f5f5f5;
-  color: #2d2d2d;
-  font-family: 'Roboto', sans-serif;
+  text-align: center;                /* Center-align all text within the header */
+  padding-top: 60px;                 /* Add vertical spacing at the top */
+  padding-bottom: 60px;              /* Add vertical spacing at the bottom */
+  background: #f5f5f5;               /* Light gray background for visual separation */
+  color: #2d2d2d;                    /* Dark text color for contrast */
+  font-family: 'Roboto', sans-serif; /* Consistent, readable font */
 }
 
 /* Responsive styling for mobile devices */
 @media (max-width: 768px) {
   .contact-header p {
-    padding-left: 1rem;
+    padding-left: 1rem;              /* Add horizontal padding for smaller screens */
     padding-right: 1rem;
   }
 }

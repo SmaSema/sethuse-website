@@ -1,27 +1,38 @@
-/* Section background */
+/* 
+   Author: Smangalene Charles Sema
+   Date: 27 August 2025
+   Description: Styles for the AlternateContact component. 
+                Provides styling for the section containing alternative
+                contact methods (email, phone, WhatsApp), including
+                background, card styling, and link behavior.
+*/
+
+/* Section wrapper for alternate contact */
 .alt-contact-section {
-  background-color: #f5f5f5; /* Light warm background for entire section */
-  padding: 4rem 1rem;
+  background-color: #f5f5f5; /* Light warm gray background for visual separation */
+  padding: 4rem 1rem;        /* Vertical and horizontal spacing */
 }
 
-/* Card style */
+/* Card container for contact info */
 .alt-contact {
-  background-color: #eafeff63;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
-  font-family: 'Helvetica Neue', sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: #eafeff63;          /* Light bluish semi-transparent card */
+  padding: 2rem;                        /* Inner spacing for content */
+  border-radius: 8px;                    /* Rounded edges */
+  max-width: 500px;                      /* Limit card width for readability */
+  margin: 0 auto;                        /* Center horizontally */
+  text-align: left;                      /* Align text to the left for readability */
+  font-family: 'Helvetica Neue', sans-serif; /* Modern clean font */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
+/* Links inside the alternate contact card */
 .alt-contact a {
-  color: #2893eb;
-  text-decoration: none;
-  font-weight: bold;
+  color: #2893eb;      /* Bright blue for clear visibility */
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold;      /* Slight emphasis for links */
 }
 
+/* Hover state for links */
 .alt-contact a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover for interaction feedback */
 }

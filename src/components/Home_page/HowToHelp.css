@@ -1,0 +1,154 @@
+/* 
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the "How You Can Help" section including cards, tooltips, 
+   and share buttons. Designed to highlight volunteer opportunities, donations, 
+   and community engagement in a clean and interactive way.
+*/
+
+/* Section container styling */
+.help-section {
+  background-color: #eeeeee; /* light grey background for contrast */
+  padding: 60px 20px; /* spacious padding */
+  text-align: center; /* center align content */
+}
+
+/* Section title */
+.help-title {
+  font-size: 2rem; /* large heading */
+  color: #222; /* dark text */
+  margin-bottom: 20px;
+}
+
+/* Divider under section heading */
+.divider-work {
+  width: 80px;
+  height: 4px;
+  background-color: #6a1b9a; /* purple accent */
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* Responsive grid for cards */
+.help-grid {
+  display: grid;
+  gap: 32px; /* spacing between cards */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* flexible grid */
+  justify-items: center; /* center align cards */
+}
+
+/* Help card styling */
+.help-card {
+  background-color: #fff; /* white card */
+  border-radius: 12px; /* rounded corners */
+  padding: 30px 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  transition: transform 0.2s ease;
+  max-width: 320px; /* card width */
+  text-decoration: none; /* remove underline for links */
+  color: inherit; /* inherit text color */
+  position: relative; /* needed for tooltip */
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Hover effect on help cards */
+.help-card:hover {
+  transform: translateY(-5px); /* lift effect */
+  background-color: #f9f9f9; /* slightly lighter background */
+  border: 2px solid #6a1b9a; /* purple border highlight */
+}
+
+/* Tooltip text styling */
+.tooltip-text {
+  visibility: hidden; /* hidden by default */
+  width: max-content; /* adjust width to text */
+  background-color: #6a1b9a; /* purple background */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  bottom: 110%; /* appear above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* hidden until hover */
+  transition: opacity 0.3s; /* fade effect */
+  font-size: 0.85rem;
+  pointer-events: none; /* prevent blocking hover */
+  z-index: 10;
+}
+
+/* Show tooltip on hover */
+.help-card:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Card icons (e.g., volunteer, donate, share) */
+.help-icon {
+  font-size: 2.5rem; /* large icons */
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Card heading */
+.help-heading {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Card description */
+.help-description {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Share button group */
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* Individual share button */
+.share-button {
+  background-color: #6a1b9a;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover state for share buttons */
+.share-button:hover {
+  background-color: #4b0073; /* darker purple */
+}
+
+/* Active click effect */
+.share-button:active {
+  transform: scale(0.95); /* slight shrink */
+}
+
+/* Green tooltip (special case, e.g., for success feedback) */
+.card-tooltip {
+  position: absolute;
+  top: 10px; /* above the card heading */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f9a1b; /* green background */
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap; /* single-line */
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.95;
+}

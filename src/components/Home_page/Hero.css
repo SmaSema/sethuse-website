@@ -1,19 +1,29 @@
-/* Hero Section */
+/* 
+   Hero Section Styles
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the Hero section of the homepage, 
+                including background image, overlay, heading, 
+                paragraph, call-to-action buttons, and responsive adjustments.
+*/
+
+/* Hero section container */
 .hero {
-  background-image: url('/src/assets/hero.jpg');
-  background-position: center;
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  height: 50vh;
-  width: 100%; 
+  background-image: url('/src/assets/hero.jpg'); /* Background image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Cover the entire section */
+  background-repeat: no-repeat;
+  height: 50vh; /* 50% of viewport height */
+  width: 100%;
   position: relative;
   color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  align-items: center; /* Vertical alignment */
+  justify-content: left; /* Horizontal alignment */
   text-align: left;
 }
 
+/* Overlay on hero image for text readability */
 .hero-overlay {
   background: linear-gradient(to right, rgba(65, 58, 67, 0.515), rgba(118, 63, 111, 0));
   padding: 40px;
@@ -21,20 +31,24 @@
   margin-left: 40px;
 }
 
+/* Main Hero Heading */
 h1 {
   color: #ffffff;
   margin-bottom: 16px;
   font-size: 35px;
 }
 
+/* Paragraph inside hero overlay */
 .hero-overlay p {
-  font-size: 20px ;
+  font-size: 20px;
 }
 
+/* Container for buttons inside hero */
 .hero-buttons {
   margin-top: 20px;
 }
 
+/* Base button styling */
 button {
   padding: 12px 24px;
   border: none;
@@ -45,7 +59,7 @@ button {
   transition: background 0.3s;
 }
 
-/* Ensure Link buttons look the same as real buttons */
+/* Ensure Link buttons look identical to native buttons */
 .hero-buttons .primary,
 .hero-buttons .secondary {
   display: inline-block;
@@ -55,57 +69,66 @@ button {
   font-weight: 600;
   cursor: pointer;
   margin: 0 10px;
-  text-decoration: none;    /* Remove underline */
+  text-decoration: none; /* Remove underline */
   transition: background 0.3s;
 }
 
+/* Primary button styling */
 .hero-buttons .primary {
   background-color: #0f97b9;
   color: #000;
 }
 
 .hero-buttons .primary:hover {
-  background-color: #d97706;
+  background-color: #d97706; /* Hover color change */
 }
 
+/* Secondary button styling */
 .hero-buttons .secondary {
   background-color: #fff;
   color: #444;
 }
 
 .hero-buttons .secondary:hover {
-  background-color: #cc64cc;
-  color: #fff;
+  background-color: #cc64cc; /* Hover background */
+  color: #fff; /* Hover text color */
 }
 
-/* Responsive styling for mobile */
+/* =========================================
+   Responsive styling for mobile devices
+========================================= */
 @media (max-width: 768px) {
+
+  /* Increase hero section height for smaller screens */
   .hero {
     height: 70vh;
   }
 
+  /* Overlay adjustments for mobile */
   .hero-overlay {
     background: linear-gradient(to bottom, rgba(65, 58, 67, 0.515), rgba(53, 25, 49, 0.473));
-    margin-right: 40px;
-    margin-bottom: 20px;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
   }
 
+  /* Center heading text */
   h1 {
     text-align: center;
   }
 
+  /* Center paragraph text */
   p {
     text-align: center;
   }
-  
+
+  /* Stack buttons vertically on mobile */
   .hero-buttons {
     display: flex;
-    flex-direction: column;   /* Stack buttons vertically */
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
 }

@@ -1,58 +1,68 @@
+/* Author: Smangalene Charles Sema                               */
+/* Date: 5 September 2025                                        */
+/* Description: Styles for the Objectives Section on the Our    */
+/*              Work page. Includes layout, card styling, grid, */
+/*              and responsive behavior for different screens.  */
+
+/* Section heading */
 h5 {
-    margin-top: 1rem;
-    font-size: 2.3rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    margin-top: 1rem;          /* Space above heading */
+    font-size: 2.3rem;         /* Large font for emphasis */
+    text-align: center;        /* Centered on the page */
+    margin-bottom: 1rem;       /* Space below heading */
 }
 
-/*Line Under*/
+/* Decorative line under heading */
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
+  background-color: #6a1b9a;  /* Accent color */
   border: none;
-  margin: 10px auto 20px; 
+  margin: 10px auto 20px;      /* Centered with vertical spacing */
 }
 
+/* Container for the objectives section */
 .objectives {
-  padding: 2rem 1rem;
-  background-color: #f9f4ef;
+  padding: 2rem 1rem;           /* Space around content */
+  background-color: #f9f4ef;    /* Light cream background */
 }
 
+/* Grid layout for objective cards */
 .objectives-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+  gap: 2rem;                            /* Space between cards */
+  margin-top: 3rem;                      /* Space above the grid */
 }
 
+/* Individual objective card styling */
 .objective-card {
-  padding: 1rem;
-  background-color: white;
-  max-width: 320px; 
-  margin: 0 auto; /* Center the card within the column */
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  padding: 1rem;                        /* Inner spacing */
+  background-color: white;               /* Card background */
+  max-width: 320px;                      /* Prevent overly wide cards */
+  margin: 0 auto;                        /* Center card within column */
+  border-radius: 10px;                   /* Rounded edges */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease;       /* Smooth hover effect */
 }
 
+/* Hover effect for cards */
 .objective-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px);           /* Lift card slightly on hover */
 }
 
-/* Responsive styling for mobile */
+/* Responsive styling for tablets and mobile */
 @media (max-width: 768px) {
   .objectives-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    gap: 0.5rem;                           /* Reduce gap for smaller screens */
   }
 
   .objective-card {
-    max-width: 170px;
+    max-width: 170px;                       /* Reduce card width on small screens */
   }
 
   .objective-card h3 {
-    text-align: center;
+    text-align: center;                      /* Center title on small cards */
   }
 }
-

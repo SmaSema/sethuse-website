@@ -1,76 +1,87 @@
-/* Hero Section */
+/*
+   File: HeroAbout.css
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the Hero section on the About Us page.
+                Includes background image, overlay, heading, paragraph,
+                page title, and responsive adjustments for mobile devices.
+*/
+
+/* Main Hero Section */
 .hero2 {
-  background-image: url('/src/assets/hero-about2.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 60vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  width: 100vw;
-  max-width: 100%;
+  background-image: url('/src/assets/hero-about2.jpg'); /* Hero background image */
+  background-size: cover;               /* Cover entire container */
+  background-position: center center;   /* Center the image */
+  background-repeat: no-repeat;         /* Prevent repeating */
+  position: relative;                   /* For overlay positioning */
+  height: 60vh;                         /* Section height */
+  color: white;                          /* Text color */
+  display: flex;                        /* Flex for centering content */
+  align-items: center;                  /* Vertical centering */
+  justify-content: center;              /* Horizontal centering */
+  text-align: center;                   /* Center text */
+  overflow: hidden;                      /* Hide overflow */
+  width: 100vw;                          /* Full viewport width */
+  max-width: 100%;                       /* Ensure no overflow */
 }
 
-/* Overlay */
+/* Overlay layer on hero section */
 .hero2 .overlay {
-  position: absolute;
+  position: absolute;                   /* Positioned over hero image */
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.267));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.267)); /* Gradient overlay */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  padding-top: 150px;
-  z-index: 1;
+  padding: 2rem;                        /* Inner padding */
+  padding-top: 150px;                   /* Space from top */
+  z-index: 1;                            /* Overlay behind text */
 }
 
-/* Heading and Paragraph */
+/* Heading and paragraph inside overlay */
 .hero2 .overlay h1,
 .hero2 .overlay p {
-  z-index: 2;
+  z-index: 2;                            /* Above overlay */
   margin: 0.5rem 0;
-  padding: 0 1rem;
-  max-width: 90vw;
+  padding: 0 1rem;                       /* Side padding */
+  max-width: 90vw;                       /* Responsive width */
 }
 
-/* Page title if used */
+/* Optional page title */
 .page-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  z-index: 2;
+  z-index: 2;                             /* Above overlay */
 }
 
-/* Responsive styling for mobile */
+/*
+   Responsive styling for mobile
+*/
 @media (max-width: 768px) {
   .hero2 {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100vw;                        /* Ensure full width */
   }
 
   .hero2 .overlay {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem;                /* Adjust padding for smaller screens */
     padding-top: 130px;
-    margin: 0; /* 🚫 REMOVE margin-right */
+    margin: 0;                            /* Remove margins */
     width: 100%;
     left: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.267));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.267)); /* Darker overlay */
   }
 
   .hero2 .overlay h1,
   .hero2 .overlay p {
-    padding: 0 1rem;
+    padding: 0 1rem;                     /* Consistent side padding */
   }
 }

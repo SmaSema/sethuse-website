@@ -1,38 +1,47 @@
+/* Author: Smangalene Charles Sema                               */
+/* Date: 5 September 2025                                        */
+/* Description: Styles for the Hero/Intro section on the Our    */
+/*              Work page. Includes header block, text styling, */
+/*              button styling, and responsive adjustments.     */
+
+/* Container for the hero section */
 .header-block {
   display: flex;
-  flex-direction: column;  
-  align-items: center;     
-  justify-content: center; 
-  text-align: center;      
-  padding: 2rem 1rem;      
-  background-color: #e5e3e3b6;
+  flex-direction: column;        /* Stack elements vertically */
+  align-items: center;           /* Center horizontally */
+  justify-content: center;       /* Center vertically */
+  text-align: center;            /* Center text content */
+  padding: 2rem 1rem;            /* Space around content */
+  background-color: #e5e3e3b6;  /* Light gray/transparent background */
 }
 
+/* Hero heading */
 .header-block h4 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;             /* Large heading font */
+  margin-bottom: 0.5rem;         /* Space below heading */
 }
 
+/* Hero paragraph */
 .header-block p {
-  font-size: 1.2rem;
-  max-width: 900px;
-  margin: 0 auto 1.5rem;
+  font-size: 1.2rem;             /* Standard paragraph font */
+  max-width: 900px;              /* Limit width for readability */
+  margin: 0 auto 1.5rem;         /* Center paragraph and space below */
 }
 
+/* Call-to-action button */
 .explore-btn {
-  background-color: #f68b1f;
-  color: white;
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #f68b1f;     /* Bright orange for emphasis */
+  color: white;                  /* Text color */
+  padding: 0.8rem 1.6rem;        /* Space inside button */
+  border: none;                  /* Remove default border */
+  border-radius: 4px;            /* Slightly rounded edges */
+  cursor: pointer;               /* Pointer on hover */
 }
 
-/* Responsive styling for mobile */
+/* Responsive styling for tablets and mobile */
 @media (max-width: 768px) {
   .header-block p {
-    font-size: 1rem;     /* Slightly smaller paragraph text */
-    max-width: 80%;     /* Ensure it doesn’t overflow or get restricted */
+    font-size: 1rem;             /* Slightly smaller paragraph text */
+    max-width: 80%;              /* Ensure paragraph fits smaller screens */
   }
-
 }

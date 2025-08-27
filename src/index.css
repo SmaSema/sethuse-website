@@ -1,20 +1,46 @@
-/* Smooth scrolling for all anchor links */
+/*
+  Author: Smangalene Charles Sema
+  Date: 5 September 2025
+  Description:
+    Base styling for the entire React application.
+    Sets smooth scrolling, resets default margins/paddings, 
+    and defines default font families for body and code elements.
+*/
+
+/* Enable smooth scrolling for all anchor links */
 html {
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth; /* Smooth transition when navigating within page */
+  margin: 0;               /* Remove default margin */
+  padding: 0;              /* Remove default padding */
 }
 
+/* Body global styling */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0; /* Remove default margin */
+  font-family: 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    'Segoe UI', 
+    'Roboto', 
+    'Oxygen',
+    'Ubuntu', 
+    'Cantarell', 
+    'Fira Sans', 
+    'Droid Sans', 
+    'Helvetica Neue',
+    sans-serif; /* Cross-platform system font stack */
+  
+  -webkit-font-smoothing: antialiased; /* Improves rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale;  /* Improves rendering on macOS Firefox */
 }
 
+/* Code element styling */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 
+    source-code-pro, 
+    Menlo, 
+    Monaco, 
+    Consolas, 
+    'Courier New', 
+    monospace; /* Monospaced fonts for code readability */
 }

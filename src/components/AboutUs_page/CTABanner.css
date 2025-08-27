@@ -1,51 +1,66 @@
-/* CTA Banner */
+/* 
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the Call-To-Action (CTA) Banner on the About Us page.
+                Includes container layout, banner card styling, hover effects,
+                button styling, and responsive adjustments for mobile.
+*/
+
+/* Main wrapper for the CTA section */
 .cta-wrapper {
-  background-color: #fef7ec; /* light cream background */
-  padding: 1rem 1rem;
+  background-color: #fef7ec; /* Light cream background for section */
+  padding: 1rem 1rem;         /* Inner padding */
 }
 
+/* CTA Banner card */
 .cta-banner {
-  background-color: #ffffffd0;
-  color: rgb(26, 64, 112);
-  text-align: center;
-  padding: 3rem 2rem;
-  margin: 4rem auto 0; /* Center horizontally and add top margin */
-  margin-bottom: 4rem;
-  width: 700px;
-  border-radius: 10px; /* optional: gives rounded edges */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* dark shadow: no sideway shift, appear below, soft */
-  transition: transform 0.3s ease; /* for smooth hover movement */
+  background-color: #ffffffd0;           /* Semi-transparent white background */
+  color: rgb(26, 64, 112);               /* Text color */
+  text-align: center;                     /* Center text */
+  padding: 3rem 2rem;                     /* Inner padding */
+  margin: 4rem auto 0;                    /* Center horizontally and add top margin */
+  margin-bottom: 4rem;                    /* Bottom spacing */
+  width: 700px;                           /* Fixed card width */
+  border-radius: 10px;                    /* Rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Soft shadow below card */
+  transition: transform 0.3s ease;        /* Smooth hover movement */
 }
 
+/* Hover effect for banner */
 .cta-banner:hover {
-  transform: translateY(-3px); /* Moves up by 5px on hover */
+  transform: translateY(-3px); /* Move banner slightly up on hover */
 }
 
+/* Heading inside CTA banner */
 .cta-banner h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;             /* Font size for heading */
+  margin-bottom: 1rem;         /* Space below heading */
 }
 
+/* Button styling inside CTA banner */
 .cta-banner button {
-  background-color: #aa21add7;
-  color: #ffffff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #aa21add7;  /* Purple background */
+  color: #ffffff;               /* White text */
+  border: none;                 /* Remove default border */
+  padding: 0.8rem 1.5rem;       /* Padding inside button */
+  font-weight: bold;            /* Bold text */
+  border-radius: 5px;           /* Rounded edges */
+  cursor: pointer;              /* Pointer cursor on hover */
 }
 
+/* Button hover effect */
 .cta-banner button:hover {
-  background-color: #0f97b9;
-  color: rgb(255, 255, 255);
+  background-color: #0f97b9;    /* Change background color */
+  color: rgb(255, 255, 255);    /* Keep text white */
 }
 
-/* Responsive styling for mobile */
+/* 
+   Responsive styling for mobile
+*/
 @media (max-width: 768px) {
   .cta-banner {
-    max-width: fit-content;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    max-width: fit-content;     /* Adjust width for smaller screens */
+    padding-top: 20px;          /* Reduce top padding */
+    padding-bottom: 30px;       /* Reduce bottom padding */
   }
 }

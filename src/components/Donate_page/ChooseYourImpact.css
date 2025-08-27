@@ -1,0 +1,84 @@
+.donation-options {
+  background-color: #f9f4ef;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.donation-options h2 {
+  padding-top: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  flex-wrap: wrap;
+}
+
+.option-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.option-card.selected {
+  border: 2px solid #b31eab;
+  background-color: #f1caf07a;
+}
+
+.option-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.option-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.option-card button {
+  background-color: #b31eab;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card button:hover {
+  background-color: #d97706;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .options {
+        display: flex;
+        justify-content: center;  /* horizontal center */
+        align-items: center;      /* vertical center */
+        min-height: 100vh;        /* take full viewport height */
+        margin-bottom: -40px;
+    }
+  
+
+}

@@ -1,6 +1,13 @@
-import React from "react";
-import '../OurWork_page/ObjectivesSection.css'
+// Author: Smangalene Charles Sema
+// Date: 5 September 2025
+// Description: Displays the objectives section for the Our Work page.
+//              Each objective is displayed as a card with a title and description.
+//              Supports animation on scroll using AOS library.
 
+import React from "react";
+import '../OurWork_page/ObjectivesSection.css'; // Import CSS for styling
+
+// Array of objectives with title and description
 const objectives = [
   { title: "Education", description: "Facilitating learning and skill development for brighter futures." },
   { title: "Youth Development", description: "Empowering youth through mentorship and leadership." },
@@ -13,15 +20,28 @@ const objectives = [
   { title: "Food Security", description: "Ensuring access to nutritious food through gardens and education." },
 ];
 
+// Functional component to display the objectives section
 export default function ObjectivesSection() {
   return (
     <section className="objectives">
+      
+      {/* Section title */}
       <h5>Our Guiding Objectives</h5>
+      
+      {/* Divider line under title */}
       <hr className="divider" />
+
+      {/* Grid container for all objective cards */}
       <div className="objectives-grid" data-aos="fade-up">
+        
+        {/* Map through objectives array and display each as a card */}
         {objectives.map((obj, index) => (
           <div key={index} className="objective-card">
+            
+            {/* Objective title */}
             <h3>{obj.title}</h3>
+
+            {/* Objective description */}
             <p>{obj.description}</p>
           </div>
         ))}

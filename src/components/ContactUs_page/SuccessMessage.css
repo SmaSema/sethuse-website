@@ -1,7 +1,16 @@
+/*
+   Author: Smangalene Charles Sema
+   Date: 27 August 2025
+   Description: Styles for the SuccessMessage component. 
+                This component displays a confirmation message when 
+                a contact form is successfully submitted.
+*/
+
+/* Container for the success message */
 .success-message {
-  padding: 2rem;
-  text-align: center;
-  background-color: #d7f6e7;
-  color: #266e4a;
-  border-radius: 8px;
+  padding: 2rem;                   /* Adds spacing inside the box */
+  text-align: center;              /* Center aligns text */
+  background-color: #d7f6e7;       /* Light green background to indicate success */
+  color: #266e4a;                  /* Dark green text for readability */
+  border-radius: 8px;              /* Rounded corners for a smooth appearance */
 }

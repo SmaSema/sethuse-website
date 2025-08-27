@@ -1,0 +1,51 @@
+.payment-section {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(223, 191, 245, 0.445);
+}
+
+.payment-section h2 {
+  padding-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.payment-section p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.paysharp-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paysharp-features li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .paysharp-features {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .paysharp-features li {
+    font-size: 0.95rem;
+    justify-content: flex-start;
+  }
+}

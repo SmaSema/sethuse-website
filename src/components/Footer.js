@@ -1,26 +1,37 @@
-// src/components/Footer.js
+/* 
+   Author: Smangalene Charles Sema
+   Date: 27 August 2025
+   Description: Footer component for Sethuse Community Haven website.
+                Features include:
+                - Organization name, tagline, and physical address
+                - Quick navigation links for easy site access
+                - Social media links with icons (Facebook, Instagram, TikTok)
+                - Bottom copyright and registration information
+*/
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
-import { FaFacebookF, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
-import { SiTiktok } from 'react-icons/si';
+import { Link } from 'react-router-dom'; // optional: for internal routing
+import './Footer.css';                   // CSS styling for footer
+import { FaFacebookF, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'; // FontAwesome icons
+import { SiTiktok } from 'react-icons/si'; // TikTok icon
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        {/* Left: Name and Address */}
+      
+      <div className="footer-container" data-aos="fade-up">
+        {/* Left Section: Organization Name, Tagline, and Address */}
         <div className="footer-logo">
           <h2>Sethuse Community Haven</h2>
           <p>Empowering communities, transforming lives.</p>
+
           <div className="footer-address">
             <FaMapMarkerAlt size={16} style={{ marginRight: '8px' }} />
             <span>516 Unit 18, Imbali, Pietermaritzburg, 3201</span>
           </div>
         </div>
 
-        {/* Middle: Quick links */}
+        {/* Middle Section: Quick Navigation Links */}
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
@@ -32,27 +43,45 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Right: Social media */}
+        {/* Right Section: Social Media Icons */}
         <div className="footer-social">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100092553245300#" target="_blank" rel="noopener noreferrer">
+            {/* Facebook link */}
+            <a 
+              href="https://www.facebook.com/profile.php?id=100092553245300#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <FaFacebookF size={20} />
             </a>
-            <a href="https://www.tiktok.com/search?q=sethuse%20community%20haven&t=1751316789756" target="_blank" rel="noopener noreferrer">
+
+            {/* TikTok link */}
+            <a 
+              href="https://www.tiktok.com/search?q=sethuse%20community%20haven&t=1751316789756" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <SiTiktok size={20} />
             </a>
-            <a href="https://www.instagram.com/sethuse_community_haven_npo/" target="_blank" rel="noopener noreferrer">
+
+            {/* Instagram link */}
+            <a 
+              href="https://www.instagram.com/sethuse_community_haven_npo/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <FaInstagram size={20} />
             </a>
           </div>
         </div>
       </div>
 
+      {/* Footer Bottom: Copyright & Registration Info */}
       <div className="footer-bottom">
-  <p>&copy; {new Date().getFullYear()} Sethuse Community Haven. All rights reserved.</p>
-  <p>Reg. No: NPO 290-151 | Established: 2023</p>
-</div>
+        <p>&copy; {new Date().getFullYear()} Sethuse Community Haven. All rights reserved.</p>
+        <p>Reg. No: NPO 290-151 | Established: 2023</p>
+      </div>
 
     </footer>
   );

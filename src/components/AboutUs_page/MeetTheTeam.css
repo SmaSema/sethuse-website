@@ -1,68 +1,85 @@
+/*
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the "Meet the Team" section on the About Us page.
+                Includes layout for the section, team grid, individual cards,
+                headings, roles, quotes, and responsive adjustments for mobile.
+*/
+
+/* Main container for the Meet the Team section */
 .meet-the-team {
-  background-color: #e5e3e3;
-  padding: 2rem 2rem;
-  text-align: center;
+  background-color: #e5e3e3;  /* Light gray background */
+  padding: 2rem 2rem;          /* Section padding */
+  text-align: center;           /* Centered text */
 }
 
+/* Section heading styling */
 .meet-the-team h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 2.2rem;           /* Heading font size */
+  margin-bottom: 1rem;         /* Space below heading */
+  color: #333;                 /* Dark gray text color */
 }
 
-/*Line Under*/
+/* Divider line under heading */
 .divider {
-  width: 80px;
-  height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
-  border: none;
-  margin: 10px auto 20px; /* Spacing around the line */
+  width: 80px;                 /* Line width */
+  height: 4px;                 /* Line thickness */
+  background-color: #6a1b9a;   /* Purple accent color */
+  border: none;                /* Remove default border */
+  margin: 10px auto 20px;      /* Centered line with spacing */
 }
 
+/* Grid layout for team member cards */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 4rem;
-  justify-content: center;
+  display: grid;                                       /* Use CSS grid */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 4rem;                                           /* Space between cards */
+  justify-content: center;                             /* Center grid items */
   margin-top: 4rem;
   margin-bottom: 2rem;
   margin-left: 3rem;
   margin-right: 2rem;
 }
 
+/* Individual team member card */
 .team-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
-  width: 330px;
+  background: white;                                   /* White card background */
+  padding: 1.5rem;                                    /* Inner padding */
+  border-radius: 10px;                                 /* Rounded corners */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);            /* Subtle shadow */
+  width: 330px;                                       /* Fixed card width */
 }
 
+/* Team member name styling */
 .team-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.3rem;                                  /* Name font size */
   margin-bottom: 0.5rem;
-  color: #2893eb;
+  color: #2893eb;                                     /* Highlight color */
 }
 
+/* Team member role styling */
 .team-card .role {
   font-style: italic;
   color: #555;
   margin-bottom: 1rem;
 }
 
+/* Team member quote styling */
 .team-card .quote {
   font-size: 0.95rem;
   color: #333;
 }
 
-/* Responsive styling for mobile */
+/* 
+   Responsive styling for mobile
+*/
 @media (max-width: 600px) {
   .team-grid {
     margin-left: 1rem;
-    margin-right: 1rem; /* Match left margin */
+    margin-right: 1rem;        /* Match left margin for mobile */
   }
 
   .team-card {
-    width: 100%; /* Allow full width within padded grid */
+    width: 100%;               /* Allow full width within padded grid */
   }
 }

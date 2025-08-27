@@ -1,44 +1,66 @@
+/* Author: Smangalene Charles Sema                               */
+/* Date: 5 September 2025                                        */
+/* Description: Styles for the Project Card component on the    */
+/*              Our Work page. Includes layout, card design,    */
+/*              image styling, and tags for project objectives. */
+
+/* Container for all projects */
 .projects {
-  padding: 2rem 1rem;
-  background-color: #e5e3e3b6;
+  padding: 2rem 1rem;               /* Vertical and horizontal spacing */
+  background-color: #e5e3e3b6;      /* Light semi-transparent background */
 }
 
-/*Line Under*/
+/* Decorative line under headings */
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
+  background-color: #6a1b9a; /* Matches accent color */
   border: none;
-  margin: 10px auto 20px; /* Spacing around the line */
+  margin: 10px auto 20px;    /* Centered with spacing */
 }
 
+/* Individual project card styling */
 .project-card {
   display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex-direction: column;               /* Stack elements vertically */
+  background-color: #fff;               /* White card background */
+  margin: 3rem auto 2rem;               /* Center horizontally and spacing top/bottom */
+  border-radius: 10px;                  /* Rounded corners */
+  overflow: hidden;                      /* Clip overflowing child elements */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft shadow for depth */
+  width: 80%;                            /* Card width relative to parent */
+  max-width: 1800px;                     /* Prevent overly wide cards */
 }
+
+/* Project image styling */
 .project-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 90%;              /* Image width relative to card */
+  height: auto;            /* Maintain aspect ratio */
+  object-fit: cover;       /* Crop image nicely if needed */
+  display: block;          /* Makes margin auto centering work */
+  margin: 3rem auto 0;     /* Top margin + center horizontally */
 }
+
+/* Container for project info (title, description, date, etc.) */
 .project-info {
   padding: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;    /* Extra padding at bottom */
 }
+
+/* Tags container under project description */
 .objectives-tags {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem;      /* Space above tags */
 }
+
+/* Individual tag styling */
 .tag {
-  display: inline-block;
-  background-color: #e0d6f3;
-  color: #4b2e83;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  margin: 0.2rem;
+  display: inline-block;    /* Allows multiple tags on the same line */
+  background-color: #e0d6f3; /* Light purple background */
+  color: #4b2e83;           /* Dark purple text */
+  padding: 0.3rem 0.6rem;   /* Inner spacing for readability */
+  border-radius: 8px;        /* Rounded edges */
+  font-size: 0.75rem;        /* Small text size for tags */
+  margin: 0.2rem;            /* Space between tags */
 }

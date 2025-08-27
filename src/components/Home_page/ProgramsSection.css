@@ -1,3 +1,10 @@
+/* Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: This stylesheet defines the styles for the "Our Work" (Programs Section) 
+                of the Sethuse Community Haven website. It includes layout, typography, 
+                card styling, hover effects, buttons, and responsive design adjustments.
+*/
+
 /* Our Work Section Container */
 .programs-section {
   padding: 20px 140px; 
@@ -6,13 +13,14 @@
   margin-bottom: 3rem;
 }
 
-/* Title Styling */
+/* Section Title Styling */
 .programs-title {
   font-size: 2rem;
   color: #222;
   margin-bottom: 10px; 
 }
 
+/* Divider line under section title */
 .divider-work {
   width: 80px;
   height: 4px;
@@ -50,22 +58,26 @@
   margin-bottom: 12px; 
 }
 
+/* Hover effect for Program Card */
 .program-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Optional icon styling for program card */
 .program-icon {
   font-size: 2.5rem;
   margin-bottom: 16px;
   display: block;
 }
 
+/* Program Title */
 .program-label {
   font-size: 1.1rem;
   color: #444;
 }
 
+/* Program Description */
 .program-description {
   font-size: 0.95rem;
   color: #666;
@@ -78,6 +90,7 @@
   margin-top: 50px;
 }
 
+/* View More Button Styling */
 .view-more-button {
   background-color: #6a1b9a;
   color: white;
@@ -88,14 +101,9 @@
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect for View More Button */
 .view-more-button:hover {
   background-color: #b460cb;
-}
-
-.program-description {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 8px;
 }
 
 /* Responsive mobile styles */

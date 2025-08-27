@@ -1,68 +1,79 @@
-/* Container for the mission section */
+/* 
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the "Our Mission" section on the About Us page.
+                Includes styling for the mission text, image, section layout, 
+                divider line, and responsive adjustments for mobile devices.
+*/
+
+/* Main container for the mission section */
 .mission {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2rem;
-  gap: 2rem;
-  background-color: #e5e3e3;
-  flex-wrap: wrap; /* Wrap on smaller screens */
+  display: flex;                       /* Arrange text and image side by side */
+  align-items: center;                 /* Vertically center content */
+  justify-content: space-between;      /* Space between text and image */
+  padding: 4rem 2rem;                  /* Section padding */
+  gap: 2rem;                           /* Space between flex items */
+  background-color: #e5e3e3;           /* Light gray background */
+  flex-wrap: wrap;                      /* Wrap items on smaller screens */
 }
 
-/* Text side of the mission section */
+/* Text container in the mission section */
 .mission-text {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 150px;
+  flex: 1;                             /* Take equal space */
+  min-width: 300px;                     /* Minimum width to prevent overflow */
+  padding-left: 150px;                  /* Left padding for spacing */
 }
 
 .mission-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-  text-align: center; /* Center text and divider */
+  font-size: 2rem;                     /* Heading size */
+  margin-bottom: 1rem;                 /* Space below heading */
+  color: #333;                         /* Dark text color */
+  text-align: center;                  /* Center heading and divider */
 }
 
-/*Line Under*/
+/* Divider line under heading */
 .divider {
-  width: 80px;
-  height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
-  border: none;
-  margin: 10px auto 20px; /* Spacing around the line */
+  width: 80px;                         /* Line width */
+  height: 4px;                          /* Line thickness */
+  background-color: #6a1b9a;           /* Purple accent color */
+  border: none;                         /* Remove default border */
+  margin: 10px auto 20px;              /* Center line with spacing */
 }
 
+/* Paragraph text in mission section */
 .mission-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
+  font-size: 1.1rem;                   /* Paragraph font size */
+  line-height: 1.6;                     /* Space between lines */
+  color: #555;                          /* Medium gray text */
 }
 
-/* Image side of the mission section */
+/* Image container in mission section */
 .mission-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;                             /* Take equal space */
+  min-width: 300px;                     /* Minimum width */
+  display: flex;                        /* Flex for image alignment */
+  justify-content: center;              /* Center image horizontally */
+  align-items: center;                  /* Center image vertically */
 }
 
 .mission-image img {
-  max-width: 100%;
-  height: 50vh;
-  border-radius: 10px;
+  max-width: 100%;                      /* Make image responsive */
+  height: 50vh;                         /* Set image height */
+  border-radius: 10px;                  /* Rounded corners */
 }
 
-/* Responsive styling for mobile */
+/*
+   Responsive styling for mobile
+*/
 @media (max-width: 768px) {
   .mission {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column;            /* Stack text and image vertically */
+    text-align: center;                /* Center all text */
   }
 
   .mission-image,
   .mission-text {
-    padding-left: 5px;
-    width: 100%;
+    padding-left: 5px;                 /* Reduce padding on small screens */
+    width: 100%;                       /* Full width for each container */
   }
 }

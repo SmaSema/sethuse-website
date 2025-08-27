@@ -1,31 +1,69 @@
+/*
+Author: Smangalene Charles Sema
+Date: 5 September 2025
+Description: Styles for the ScrollToTopButton React component.
+             Features include:
+             - Fixed circular button at the bottom-right of the screen
+             - Hover effect with color change
+             - Tooltip appearing above button on hover
+             - Responsive adjustments for mobile screens
+*/
+
+/* Main scroll-to-top button */
 .scroll-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: rgba(224, 123, 241, 0.8); /* 80% opacity */
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem; 
-  cursor: pointer;
-  display: flex;                
-  align-items: center;          /* Center vertically */
-  justify-content: center;      /* Center horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
+  position: fixed;                /* Fix button in viewport */
+  bottom: 2rem;                   /* Distance from bottom */
+  right: 2rem;                    /* Distance from right */
+  background-color: rgba(224, 123, 241, 0.8); /* Purple with 80% opacity */
+  color: white;                   /* Button icon color */
+  border: none;                   /* Remove default button border */
+  border-radius: 50%;             /* Make button circular */
+  width: 3rem;                    /* Button width */
+  height: 3rem;                   /* Button height */
+  font-size: 1.5rem;              /* Arrow icon size */
+  cursor: pointer;                /* Pointer on hover */
+  display: flex;                  /* Flex for centering content */
+  align-items: center;            /* Vertical centering */
+  justify-content: center;        /* Horizontal centering */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease;   /* Smooth hover effect */
+  z-index: 1000;                  /* Ensure above other elements */
 }
 
+/* Hover effect for main button */
 .scroll-to-top:hover {
-  background-color: #b44cca;
+  background-color: #b44cca;     /* Darker purple on hover */
 }
 
-/* Responsive mobile styles */
+/* Tooltip above the button */
+.scroll-to-top .tooltip {
+  visibility: hidden;             /* Hidden by default */
+  width: max-content;             /* Adjust width based on content */
+  background-color: #6a1b9a;     /* Dark accent background */
+  color: #fff;                    /* White text */
+  text-align: center;             
+  border-radius: 6px;             /* Rounded edges */
+  padding: 6px 10px;              /* Inner spacing */
+  position: absolute;             /* Position relative to button */
+  bottom: 60px;                   /* Place above the button */
+  right: 50%;                     /* Center horizontally */
+  transform: translateX(50%);     /* Fine-tune centering */
+  font-size: 0.85rem;             /* Slightly smaller font */
+  opacity: 0;                     /* Invisible initially */
+  transition: opacity 0.3s;       /* Smooth fade in */
+  pointer-events: none;           /* Prevent tooltip interaction */
+}
+
+/* Show tooltip on button hover */
+.scroll-to-top:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive styling for mobile devices */
 @media (max-width: 768px) {
   .scroll-to-top {
-    bottom: 3rem;
-    right: 1rem;
+    bottom: 3rem;                 /* Slightly higher on small screens */
+    right: 1rem;                  /* Move closer to screen edge */
   }
 }

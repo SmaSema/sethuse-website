@@ -1,54 +1,66 @@
-/* Core Values Grid */
+/* 
+   Author: Smangalene Charles Sema
+   Date: 5 September 2025
+   Description: Styles for the Core Values section on the About Us page.
+                Includes section container, grid layout, individual value cards,
+                divider line, and responsive adjustments for mobile devices.
+*/
+
+/* Main container for Core Values section */
 .core-values {
-  background-color: #fef7ec;
-  padding: 2rem 5rem;
-  text-align: center;
+  background-color: #fef7ec;   /* Light cream background */
+  padding: 2rem 5rem;           /* Section padding */
+  text-align: center;           /* Centered text */
 }
 
+/* Section heading */
 .core-values h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;          /* Space below heading */
+  font-size: 2rem;              /* Heading font size */
 }
 
-/*Line Under*/
+/* Line divider under heading */
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches the accent color */
-  border: none;
-  margin: 10px auto 20px; /* Spacing around the line */
+  background-color: #6a1b9a;   /* Accent color */
+  border: none;                 /* Remove border */
+  margin: 10px auto 20px;       /* Center and add spacing */
 }
 
+/* Grid container for core value cards */
 .core-values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 6rem;
-  margin-top: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 6rem;                    /* Space between cards */
+  margin-top: 4rem;             /* Space above grid */
 }
 
+/* Individual core value cards */
 .core-values-grid div {
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
+  padding: 1rem;                /* Inner padding */
+  border-radius: 8px;           /* Rounded corners */
+  background-color: white;       /* Card background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Subtle shadow */
+  margin-bottom: 2rem;          /* Space below card */
 }
 
-/* Responsive styling for mobile */
+/* 
+   Responsive styling for mobile
+*/
 @media (max-width: 768px) {
   .core-values {
-    padding: 0 1rem; 
-    margin-top: -2rem;
+    padding: 0 1rem;             /* Reduce side padding on small screens */
+    margin-top: -2rem;           /* Adjust spacing above section */
   }
 
   .core-values-grid {
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 2rem;                          /* Reduce gap */
+    margin-top: 2rem;                    /* Adjust top margin */
   }
 
   .core-values h2 {
-    padding-top: 3rem;
+    padding-top: 3rem;                   /* Add space above heading */
   }
 }
-

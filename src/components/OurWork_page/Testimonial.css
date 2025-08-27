@@ -1,29 +1,40 @@
+/* Author: Smangalene Charles Sema                                */
+/* Date: 5 September 2025                                        */
+/* Description: Styles for the Testimonial section on the       */
+/*              Our Work page. Includes layout, typography,     */
+/*              and card styling for displaying community       */
+/*              feedback.                                        */
+
+/* Container for the testimonial section */
 .testimonial-section {
-  background-color: #fff4ea;
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-  margin-bottom: 0;
+  background-color: #fff4ea; /* Light cream background for the section */
+  padding: 3rem 2rem;        /* Vertical and horizontal padding */
+  text-align: center;        /* Center-align text and card */
+  font-family: 'Helvetica Neue', sans-serif; /* Section font */
+  margin-bottom: 0;          /* No bottom margin */
 }
 
+/* Individual testimonial card */
 .testimonial-card {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  position: relative;
+  max-width: 600px;                     /* Limit width for readability */
+  margin: 0 auto;                       /* Center card horizontally */
+  padding: 2rem;                        /* Inner spacing */
+  background-color: #ffffff;            /* White background for contrast */
+  border-radius: 8px;                   /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  position: relative;                    /* Allows positioning child elements if needed */
 }
 
+/* Quote text styling */
 .quote {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #444444;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;    /* Slightly larger text for emphasis */
+  font-style: italic;   /* Italic style for quote */
+  color: #444444;       /* Dark gray color for readability */
+  margin-bottom: 1rem;  /* Space below the quote */
 }
 
+/* Attribution/author of the testimonial */
 .attribution {
-  font-size: 1rem;
-  color: #7a7a7a;
+  font-size: 1rem;      /* Standard paragraph size */
+  color: #7a7a7a;       /* Lighter gray for author name */
 }

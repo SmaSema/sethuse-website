@@ -1,51 +1,68 @@
-/* src/components/NavBar.css */
+/* 
+   Author: Smangalene Charles Sema
+   Date: 27 August 2025
+   Description: Styles for the responsive navigation bar (NavBar) component.
+                Features include:
+                - Desktop & mobile responsiveness
+                - Sticky navbar with scroll effects
+                - Hamburger menu toggle for mobile
+                - Active link highlighting
+                - Donate button styling
+*/
+
+/* ------------------------------------------------------------
+   Navbar container: flex layout for logo and links
+------------------------------------------------------------ */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e07bf1;
+  background-color: #e07bf1; /* primary theme color */
   padding: 0.5rem 1rem;
-  position: relative;
-  z-index: 10;
-  position: sticky;
+  position: sticky;  /* navbar sticks to top on scroll */
   top: 0;
+  z-index: 10;       /* ensures navbar stays above content */
 }
 
+/* Logo inside navbar */
 .navbar-logo img.logo {
-  height: 60px;
+  height: 60px;      /* default logo height */
 }
 
+/* Navbar links container */
 .navbar-links {
   display: flex;
-  gap: 1.5rem;
-  align-items: center; /* vertically center all links */
+  gap: 1.5rem;      /* spacing between links */
+  align-items: center;
 }
 
+/* Individual nav links */
 .navbar-links a {
-  color: white;
+  color: #5b0c57;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 0.75rem; 
-  display: flex;          
-  align-items: center;    /* vertically center content inside links */
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
-/* Active OR Open link underline */
+/* Highlight active nav link */
 .active-link {
-  border-bottom: 3.3px solid #0f97b9; 
+  border-bottom: 3.3px solid #0f97b9; /* accent underline */
   font-weight: bold;
 }
 
+/* Hover effect for links */
 .navbar-links a:hover {
   color: #0f97b9;
 }
 
-/* Highlight donate button */
+/* Donate button styles */
 .donate-link {
   background-color: #5b0c57;
   color: white !important;
-  padding: 0.5rem 1rem; /* keep horizontal padding a bit bigger */
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-weight: bold;
   display: flex;
@@ -57,16 +74,17 @@
   background-color: #0f97b9;
 }
 
-/* Active OR Open donate link */
+/* Active donate link styling overrides */
 .donate-link.active-link {
   border-bottom: none;
   background-color: #0f97b9;
 }
 
-
-/* Hamburger menu icon styles on Mobile Devices */
+/* ------------------------------------------------------------
+   Hamburger menu icon (mobile)
+------------------------------------------------------------ */
 .mobile-menu-icon {
-  display: none;
+  display: none;   /* hidden on desktop */
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
@@ -75,6 +93,7 @@
   justify-content: center;
 }
 
+/* Hamburger bars */
 .bar {
   height: 3px;
   background-color: white;
@@ -82,23 +101,43 @@
   transition: all 0.3s ease;
 }
 
-/* Animation when menu toggled */
+/* Transformations when menu is toggled */
 .rotate1 {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .fade {
   opacity: 0;
 }
+
 .rotate2 {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive mobile styles */
+/* ------------------------------------------------------------
+   Desktop specific adjustments
+------------------------------------------------------------ */
+@media (min-width: 1024px) {
+  .navbar-logo img.logo {
+    height: 80px; /* larger logo for desktop */
+    transition: transform 0.3s ease;
+  }
+}
+
+/* ------------------------------------------------------------
+   Mobile responsive styles
+------------------------------------------------------------ */
 @media (max-width: 768px) {
-  /* Make navbar stick to the top on mobile */
+
+  /* Sticky navbar on mobile */
   .navbar {
     position: sticky;
     top: 0;
+  }
+
+  /* Default logo height */
+  .navbar-logo img.logo {
+    height: 60px;
   }
 
   /* Smooth transition for logo visibility */
@@ -106,59 +145,59 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  /* Hide logo when scrolled down */
+  /* Hide logo when scrolled */
   .navbar.scrolled .navbar-logo {
     opacity: 0;
     visibility: hidden;
   }
 
-  /* Remove background and shadow on scroll */
+  /* Navbar background and shadow when scrolled */
   .navbar.scrolled {
-    background-color: transparent; 
+    background-color: transparent;
     box-shadow: none;
   }
 
-  /* Add background color and shadow when menu is open */
+  /* Navbar background and shadow when mobile menu is open */
   .navbar.menu-open {
-    background-color: #956c95; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #956c95;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Show logo again when menu is open, even if scrolled */
+  /* Show logo when menu is open, even if scrolled */
   .navbar.menu-open .navbar-logo {
     opacity: 1 !important;
     visibility: visible !important;
   }
 
-  /* Reset active link styling on mobile for cleaner look */
+  /* Reset active link styles on mobile */
   .active-link {
     border-bottom: none;
-    font-weight: normal; 
+    font-weight: normal;
   }
 
-  /* Mobile menu styles */
+  /* Mobile nav menu */
   .navbar-links {
     position: absolute;
-    top: 80px; /* height of navbar */
+    top: 80px;                 /* below navbar */
     right: 0;
     background-color: #956c95;
     width: 100%;
-    max-height: 0; /* collapsed by default */
+    max-height: 0;              /* collapsed by default */
     overflow: hidden;
     flex-direction: column;
     display: flex;
-    justify-content: center;  /* center horizontally */
-    align-items: center;      /* center vertically */
+    justify-content: center;
+    align-items: center;
     transition: max-height 0.3s ease;
     border-radius: 1px;
   }
 
-  /* Expand menu when active */
+  /* Expand mobile menu when active */
   .navbar-links.active {
     max-height: 400px;
   }
 
-  /* Style for each mobile nav link */
+  /* Mobile nav links styling */
   .navbar-links a {
     padding: 1rem;
     border-top: 1px solid #444;
@@ -170,12 +209,12 @@
     display: flex;
   }
 
-  /* Change hamburger icon bar color when scrolled */
+  /* Hamburger bars color when scrolled */
   .mobile-menu-icon.scrolled .bar {
     background-color: #5b0c57;
   }
 
-  /* Add spacing under the donate button on mobile */
+  /* Add spacing under donate button on mobile */
   .donate-link {
     margin-bottom: 1rem;
   }
