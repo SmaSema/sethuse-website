@@ -64,3 +64,30 @@
   font-size: 0.75rem;        /* Small text size for tags */
   margin: 0.2rem;            /* Space between tags */
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Individual project card styling */
+.project-card {
+  width: 100%;
+}
+
+/* Project image styling */
+.project-image {
+  margin: 1.5rem auto 0;  /* Top margin */
+}
+
+  /* Container for project info (title, description, date, etc.) */
+.project-info {
+  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;    /* Extra padding at bottom */
+  
+}
+
+.project-info p {
+  text-align: left;
+}
+
+}

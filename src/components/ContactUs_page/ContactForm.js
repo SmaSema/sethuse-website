@@ -24,10 +24,10 @@ const ContactForm = () => {
 
     // Send form data using EmailJS
     emailjs.sendForm(
-      'service_w8rs99i',    // EmailJS Service ID
-      'template_tuj4z5h',   // EmailJS Template ID
+      'service_w9n7c9g',    // EmailJS Service ID
+      'template_fztso2r',   // EmailJS Template ID
       form.current,         // Reference to form DOM node
-      'X7kJOYaPQLxoiiMGv'  // Public API Key
+      'TZU9yUMkC595cy7dh'  // Public API Key
     )
     .then(() => {
       setSubmitted(true);   // Show success message

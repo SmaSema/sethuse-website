@@ -16,8 +16,8 @@ const AlternateContact = () => (
 
       {/* Email contact */}
       <p>
-        Email: <a href="mailto:sethusecommunityhaven@gmail.com">
-                sethusecommunityhaven@gmail.com
+        Email: <a href="mailto:zungusinqobiley@gmail.com">
+                zungusinqobiley@gmail.com
               </a>
       </p>
 
