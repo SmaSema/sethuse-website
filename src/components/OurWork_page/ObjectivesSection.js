@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: Displays the objectives section for the Our Work page.
 //              Each objective is displayed as a card with a title and description.

@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: Displays the header section for the Contact Us page,
 //              including a tagline and a brief call-to-action to

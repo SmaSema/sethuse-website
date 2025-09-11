@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: React component for the Call-To-Action (CTA) banner section. 
 //              Encourages users to get involved by volunteering, 

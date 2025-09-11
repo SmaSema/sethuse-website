@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: React component for the "Meet the Team" section of the About Us page. 
 //              Displays a list of team members with their names, roles, and personal quotes.

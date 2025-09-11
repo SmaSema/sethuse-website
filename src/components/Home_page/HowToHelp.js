@@ -1,5 +1,4 @@
-// src/components/HowToHelp.js
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: This React component displays different ways users can support 
 //              Sethuse Community Haven. It includes options for volunteering, 

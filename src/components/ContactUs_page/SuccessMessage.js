@@ -1,5 +1,5 @@
 
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: Displays a confirmation message after a user
 //              successfully submits the contact form. Includes

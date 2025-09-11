@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: This React component provides a short preview of the "About Us" section 
 //              for Sethuse Community Haven. It introduces the organization's mission 

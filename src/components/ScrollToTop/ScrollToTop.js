@@ -1,5 +1,4 @@
-// 
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 27 August 2025
 // Description: 
 //   A React component that automatically scrolls the window to the top 

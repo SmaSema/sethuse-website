@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: Displays the Hero/Introduction section for the "Our Work" page.
 //              Provides an overview of the organization's objectives and guiding pillars.

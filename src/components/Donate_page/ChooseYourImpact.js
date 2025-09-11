@@ -2,7 +2,7 @@ import React from 'react';
 import './ChooseYourImpact.css';
 
 const ChooseYourImpact = ({ donationType, setDonationType }) => (
-  <section className="donation-options">
+  <section id="choose-impact-section" className="donation-options">
     <h2>Choose Your Impact</h2>
     <div className="options">
       <div 

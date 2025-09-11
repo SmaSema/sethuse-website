@@ -15,6 +15,9 @@ const DonatePage = () => {
     email: '',
     message: ''
   });
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [finalDonationAmount, setFinalDonationAmount] = useState(0);
+  const [finalDonationType, setFinalDonationType] = useState('once');
 
   const handleAmountSelect = (selectedAmount) => {
     setAmount(selectedAmount);
@@ -39,10 +42,41 @@ const DonatePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real implementation, this would integrate with PaySharp API
-    alert(`Thank you for your ${donationType === 'monthly' ? 'monthly' : 'one-time'} donation of R${customAmount || amount}! You will now be redirected to our secure payment processor.`);
-    // Redirect to PaySharp payment page would happen here
+    
+    // Store the final donation details before resetting anything
+    const finalAmount = customAmount ? parseInt(customAmount) : amount;
+    setFinalDonationAmount(finalAmount);
+    setFinalDonationType(donationType);
+    
+    setShowSuccess(true);
+    
+    setTimeout(() => {
+      setDonationType('once');
+      setAmount(500);
+      setCustomAmount('');
+      setDonorInfo({
+        name: '',
+        email: '',
+        message: ''
+      });
+    }, 5000);
   };
+
+  // If showing success message, render the success UI
+  if (showSuccess) {
+    return (
+      <main className="donate-page">
+        <div className="success-message">
+          <h2>Thank You for Your Generous Donation!</h2>
+          <p>Your {finalDonationType === 'monthly' ? 'monthly' : 'one-time'} donation of R{finalDonationAmount} will make a significant impact.</p>
+          <p>We've sent a confirmation email to {donorInfo.email} with your donation details.</p>
+          <button onClick={() => setShowSuccess(false)} className="back-button">
+            Make Another Donation
+          </button>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="donate-page">
@@ -50,10 +84,13 @@ const DonatePage = () => {
       
       <ImpactStories />
       
-      <ChooseYourImpact 
-        donationType={donationType} 
-        setDonationType={setDonationType} 
-      />
+      {/* Added ID to the section wrapping ChooseYourImpact for scrolling */}
+      <section id="choose-impact-section">
+        <ChooseYourImpact 
+          donationType={donationType} 
+          setDonationType={setDonationType} 
+        />
+      </section>
       
       <DonationForm
         donationType={donationType}

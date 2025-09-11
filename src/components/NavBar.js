@@ -1,5 +1,5 @@
 /* 
-   Author: Smangalene Charles Sema
+   Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
    Date: 27 August 2025
    Description: Responsive navigation bar for the Sethuse website.
                 Features include:

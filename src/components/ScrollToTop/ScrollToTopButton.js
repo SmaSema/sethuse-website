@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 27 August 2025
 // Description: React component for a "Scroll to Top" button. 
 //              Features include:

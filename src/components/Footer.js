@@ -1,5 +1,5 @@
 /* 
-   Author: Smangalene Charles Sema
+   Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
    Date: 27 August 2025
    Description: Footer component for Sethuse Community Haven website.
                 Features include:

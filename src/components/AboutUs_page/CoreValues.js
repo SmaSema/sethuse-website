@@ -1,4 +1,4 @@
-// Author: Smangalene Charles Sema
+// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
 // Description: React component for the "Our Core Values" section of the About Us page.
 //              Displays a list of core values with icons, titles, and descriptions,
