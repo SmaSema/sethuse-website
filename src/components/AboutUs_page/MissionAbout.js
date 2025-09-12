@@ -6,7 +6,6 @@
 
 import React from 'react';
 import '../AboutUs_page/MissionAbout.css'; // Import corresponding CSS
-import hikeImage from '/Users/smang/sethuse-website/src/assets/Hike.jpg'; // Image illustrating community support
 
 const MissionSection = () => {
   return (
@@ -32,8 +31,8 @@ const MissionSection = () => {
 
       {/* Image container */}
       <div className="mission-image" data-aos="fade-left">
-        {/* Mission image illustrating community support */}
-        <img src={hikeImage} alt="Community support activity" />
+        {/* Mission image illustrating community support - now using public folder path */}
+        <img src="/assets/Hike.jpg" alt="Community support activity" />
       </div>
     </section>
   );
