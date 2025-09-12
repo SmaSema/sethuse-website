@@ -6,7 +6,7 @@
 
 import React from 'react';
 import '../Home_page/ProgramsSection.css';
-import envImg from '/Users/smang/sethuse-website/src/assets/Env Improvement.jpg';
+import envImg from '/Users/smang/sethuse-website/src/assets/env-improvement.jpg';
 import foodSecurity from '../../assets/food_security.jpg';
 import empowerImg from '/Users/smang/sethuse-website/src/assets/GBV awareness.jpg';
 
