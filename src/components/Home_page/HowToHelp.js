@@ -88,7 +88,7 @@ const HowToHelp = () => {
 
             {/* Facebook */}
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${shareLink}`}
+              href={`https://www.facebook.com/search/top?q=sethuse%20community%20haven`}
               target="_blank"
               rel="noopener noreferrer"
               className="share-button"
@@ -98,7 +98,7 @@ const HowToHelp = () => {
 
             {/* Instagram (direct link to profile) */}
             <a
-              href="https://www.instagram.com/yourprofile"
+              href="https://www.instagram.com/sethuse_community_haven_npo/"
               target="_blank"
               rel="noopener noreferrer"
               className="share-button"
@@ -106,15 +106,6 @@ const HowToHelp = () => {
               Instagram
             </a>
 
-            {/* TikTok (direct link to profile) */}
-            <a
-              href="https://www.tiktok.com/@yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="share-button"
-            >
-              TikTok
-            </a>
 
             {/* Copy Link Button */}
             <button onClick={copyToClipboard} className="share-button">
