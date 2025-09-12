@@ -9,7 +9,6 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';          // EmailJS library for sending emails
 import SuccessMessage from './SuccessMessage';   // Component shown after successful submission
 import '../ContactUs_page/ContactForm.css';      // Form styling
-import contactImage from '/Users/smang/sethuse-website/src/assets/contact-side.png'; // Visual image
 
 const ContactForm = () => {
   // State to track if the form was successfully submitted
@@ -65,9 +64,9 @@ const ContactForm = () => {
           <button type="submit">Send Message</button>
         </form>
 
-        {/* Side image next to the form */}
+        {/* Side image next to the form - now using public folder path */}
         <div className="form-side-image">
-          <img src={contactImage} alt="Contact Visual" />
+          <img src="/assets/contact-side.png" alt="Contact Visual" />
         </div>
 
       </div>
