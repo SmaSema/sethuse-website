@@ -6,25 +6,22 @@
 
 import React from 'react';
 import '../Home_page/ProgramsSection.css';
-import envImg from '../../assets/env-improvement.jpg';
-import foodSecurity from '../../assets/food_security.jpg';
-import empowerImg from '../../assets/GBV awareness.jpg';
 
-// Array of program objects, each containing title, image, and description
+// Array of program objects, each containing title, image path, and description
 const programs = [
   {
     title: 'Environmental Improvement',
-    image: envImg,
+    image: '/assets/env-improvement.jpg', // Direct path from public folder
     description: 'Promoting clean-ups, recycling, and environmental awareness in local communities.'
   },
   {
     title: 'Food Security',
-    image: foodSecurity,
+    image: '/assets/food_security.jpg', // Direct path from public folder
     description: 'Supporting communities by promoting sustainable agriculture, improving access to nutritious food, and ensuring food security for all.',
   },
   {
     title: 'Empowerment Programs',
-    image: empowerImg,
+    image: '/assets/gbv-awareness.jpg', // Direct path from public folder
     description: 'Supporting communities through awareness campaigns and support structures.'
   },
 ];
