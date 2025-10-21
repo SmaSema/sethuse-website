@@ -1,70 +1,90 @@
-# Sethuse Community Haven Website
+# 🌍 Sethuse Community Haven Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive web platform built to support **Sethuse Community Haven**, a nonprofit initiative focused on community upliftment, transparency, and stakeholder engagement.
 
-## Available Scripts
+### 🔗 Live Site:
+https://sethuse-website.onrender.com
 
-In the project directory, you can run:
 
-### `npm start`
+## 🛠️ Tech Stack
+This project was developed using:
+- **React.js** – Frontend framework for dynamic UI rendering
+- **JavaScript** - Core scripting language
+- **CSS** - Custom styling and layout
+- **Node.js & npm** - Package management and build tools
+- **Firebase** - Authentication and credential storage for admin access
+- **Cloudinary** - Image hosting for the "Our Work" gallery
+- **Payfast** - Secure payment gateway for donations
+- **Render** - Cloud deployment platform
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
+- **📬 Contact Form** - Integrated with public assets for seamless communication
+- **📱 Responsive Design** - Optimized for mobile, tablet, and desktop
+- **🔐 Admin Page** – Secure login for staff, with credentials stored in Firebase
+- **🖼️ Dynamic Gallery** – Images on the "Our Work" page are hosted via Cloudinary
+- **💳 Donation Integration** – Payfast gateway enables secure online contributions
+- **🧩 Modular Architecture** – Clean separation of components for scalability
+- **🛡️ Security-Ready** – Structured for future authentication and data protection
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup
+To run locally:
+- git clone https://github.com/SmaSema/sethuse-website.git
+- **cd sethuse-website**
+- **npm install**
+- **npm start**
 
-### `npm run build`
+Visit http://localhost:3000 to view the app in development mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Admin Access
+The admin page is designed for internal staff use:
+- Staff credentials are securely stored and managed via **Firebase Authentication**
+- Access is restricted to authorized users only
+- Admins can manage content and monitor updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⚠️ Note: Admin credentials are not publicly accessible and require backend configuration via Firebase Console.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Image Hosting
+All images displayed on the **"Our Work"** page are:
+- Uploaded and served via **Cloudinary**
+- Optimized for performance and responsive display
+- Managed externally to reduce frontend load
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💳 Donations
+We are currently integrating **Payfast**, a South African payment gateway, to enable secure online donations directly through the website.
+- Supports credit/debit cards, EFT, and mobile payments
+- Designed to align with nonprofit compliance and donor trust
+- Future enhancements will include automated receipts and donor tracking
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✅ Once live, donors will be able to contribute via a dedicated **Donate** section on the "Donate" page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 🧪 Testing
+To launch the test runner:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**npm test**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For more details, see React Testing Documentation.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##  📤 Deployment
+This site is deployed via Render, with continuous integration from the main branch.
 
-### Analyzing the Bundle Size
+Live URL: https://sethuse-website.onrender.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📚 Learn More
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Create React App Guide](https://create-react-app.dev/docs/getting-started/)
+- [Firebase Authentication](https://firebase.google.com/docs/auth)
+- [Cloudinary Documentation](https://cloudinary.com/documentation)
+- [Payfast Integration Guide](https://www.payfast.co.za/documentation/)
+- [Render Deployment Docs](https://render.com/docs)
 
-### Making a Progressive Web App
+## ❤️ About Sethuse Community Haven
+Sethuse is a grassroots initiative committed to creating safe, inclusive spaces for learning, healing, and growth. This website serves as a digital gateway for outreach, transparency, and stakeholder engagement.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
