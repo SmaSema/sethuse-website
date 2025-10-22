@@ -3,7 +3,7 @@
 A responsive web platform built to support **Sethuse Community Haven**, a nonprofit initiative focused on community upliftment, transparency, and stakeholder engagement.
 
 ### 🔗 Live Site:
-sethuse-website-um0s.onrender.com
+[sethuse-website-um0s.onrender.com](https://sethuse-website-um0s.onrender.com)
 
 
 ## 🛠️ Tech Stack
@@ -73,7 +73,7 @@ For more details, see React Testing Documentation.
 ##  📤 Deployment
 This site is deployed via Render, with continuous integration from the main branch.
 
-Live URL: https://sethuse-website.onrender.com
+Live URL: [Sethuse Sebsite](https://sethuse-website-um0s.onrender.com)
 
 ## 📚 Learn More
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
