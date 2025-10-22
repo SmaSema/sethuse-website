@@ -3,7 +3,7 @@
 A responsive web platform built to support **Sethuse Community Haven**, a nonprofit initiative focused on community upliftment, transparency, and stakeholder engagement.
 
 ### 🔗 Live Site:
-https://sethuse-website.onrender.com
+sethuse-website-um0s.onrender.com
 
 
 ## 🛠️ Tech Stack
