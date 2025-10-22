@@ -34,7 +34,7 @@
 
 /* Project image styling */
 .project-image {
-  width: 90%;              /* Image width relative to card */
+  width: 92%;              /* Image width relative to card */
   height: auto;            /* Maintain aspect ratio */
   object-fit: cover;       /* Crop image nicely if needed */
   display: block;          /* Makes margin auto centering work */
@@ -44,7 +44,7 @@
 /* Container for project info (title, description, date, etc.) */
 .project-info {
   padding: 1rem;
-  padding-left: 4rem;
+  padding-left: 3rem;
   padding-right: 4rem;
   padding-bottom: 4rem;    /* Extra padding at bottom */
 }

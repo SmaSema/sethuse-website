@@ -1,38 +1,47 @@
 // Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
 // Date: 5 September 2025
-// Description: Displays a project card component for the Our Work page.
-//              Each card includes a project image, title, date, description,
-//              and objectives displayed as tags. Supports animation on scroll using AOS.
+// Description: Project Card component for displaying projects
 
 import React from "react";
-import '../OurWork_page/ProjectCard.css'; // Import CSS for styling
+import '../OurWork_page/ProjectCard.css';
 
-// Functional component to display individual project information
+// Placeholder image
+const placeholderImage = 'https://via.placeholder.com/800x400/6a1b9a/ffffff?text=Project+Image';
+
 export default function ProjectCard({ title, date, objectives, image, description }) {
+  // Ensure we never pass empty string to src
+  const validImage = image && image !== '' ? image : placeholderImage;
+  
+  // Ensure objectives is always an array
+  const validObjectives = objectives && Array.isArray(objectives) ? objectives : [];
+
   return (
     <div className="project-card" data-aos="fade-right">
-      
-      {/* Project image */}
-      <img src={image} alt={title} className="project-image" />
+      {/* Project image - never empty src */}
+      <img 
+        src={validImage} 
+        alt={title || "Project Image"} 
+        className="project-image"
+        onError={(e) => {
+          console.warn('❌ Image failed to load:', validImage);
+          e.target.src = placeholderImage;
+          e.target.alt = "Fallback project image";
+        }}
+        onLoad={() => console.log('✅ Image loaded successfully:', validImage)}
+      />
 
-      {/* Container for project details */}
       <div className="project-info">
+        <h3>{title || "Untitled Project"}</h3>
+        <p><strong>Date:</strong> {date || "Date not specified"}</p>
+        <p>{description || "No description available."}</p>
         
-        {/* Project title */}
-        <h3>{title}</h3>
-
-        {/* Project date */}
-        <p><strong>Date:</strong> {date}</p>
-
-        {/* Project description */}
-        <p>{description}</p>
-        
-        {/* Objectives / tags section */}
-        <div className="objectives-tags">
-          {objectives.map((obj, i) => (
-            <span key={i} className="tag">{obj}</span> // Each objective as a tag
-          ))}
-        </div>
+        {validObjectives.length > 0 && (
+          <div className="objectives-tags">
+            {validObjectives.map((obj, i) => (
+              <span key={i} className="tag">{obj}</span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

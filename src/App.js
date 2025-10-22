@@ -21,6 +21,7 @@ import AboutUs from './pages/AboutUs';
 import OurWork from './pages/OurWork';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
+import Admin from './pages/Admin';
 
 // AOS library for animations
 import AOS from 'aos';
@@ -55,6 +56,7 @@ function App() {
             <Route path="/work" element={<OurWork />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/donate" element={<Donate />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>
 
