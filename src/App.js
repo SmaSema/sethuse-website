@@ -7,7 +7,7 @@
 
 
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Change to HashRouter
 
 // Global Components
 import NavBar from './components/NavBar';
@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router> {/* This now uses HashRouter - no other changes needed */}
       {/* ScrollToTop component ensures each new page opens at top */}
       <ScrollToTop />  
 

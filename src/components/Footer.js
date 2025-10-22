@@ -48,8 +48,8 @@ function Footer() {
     try {
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       setShowAdminModal(false);
-      // Redirect to admin page after successful login
-      window.location.href = '/admin';
+      // Redirect to admin page after successful login - UPDATED FOR HashRouter
+      window.location.href = '/#/admin';
     } catch (error) {
       console.error('Login error:', error);
       switch (error.code) {
@@ -151,6 +151,9 @@ function Footer() {
               <div className="admin-status">
                 <span>Staff Portal: <strong>Active</strong></span>
                 <div className="admin-actions">
+                  <Link to="/admin" className="admin-portal-link">
+                    <FaUserShield /> Go to Admin
+                  </Link>
                   <button onClick={handleAdminLogout} className="admin-logout-btn">
                     Logout
                   </button>
@@ -177,7 +180,9 @@ function Footer() {
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/donate">Donate</Link></li>
             {/* Add Admin link to quick links when logged in */}
-            
+            {user && (
+              <li><Link to="/admin">Admin Portal</Link></li>
+            )}
           </ul>
         </div>
 
