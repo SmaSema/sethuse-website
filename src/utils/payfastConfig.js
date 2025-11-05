@@ -10,9 +10,9 @@ export const payfastConfig = {
     process: 'https://sandbox.payfast.co.za/eng/process',
     validate: 'https://sandbox.payfast.co.za/eng/query/validate'
   },
-  // Return URLs for after payment
-  returnUrl: `${window.location.origin}/#/donate/success`,
-  cancelUrl: `${window.location.origin}/#/donate/cancel`,
+  // FIXED: Use proper HashRouter format for return URLs
+  returnUrl: `${window.location.origin}/#/donate?payment=success`,
+  cancelUrl: `${window.location.origin}/#/donate?payment=cancelled`,
   notifyUrl: `${window.location.origin}/api/payfast/notify` // You'll need a backend for this in production
 };
 

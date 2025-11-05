@@ -252,6 +252,47 @@
   color: white;
 }
 
+/* Payment Messages */
+.payment-success-message,
+.payment-cancelled-message {
+  background: #f8f9fa;
+  border-left: 4px solid #28a745;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.payment-cancelled-message {
+  border-left-color: #dc3545;
+}
+
+.payment-success-message h2 {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.payment-cancelled-message h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.payment-success-message button,
+.payment-cancelled-message button {
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.payment-success-message button:hover,
+.payment-cancelled-message button:hover {
+  background: #5a148a;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .success-message {
