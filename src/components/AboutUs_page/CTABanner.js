@@ -6,7 +6,7 @@
 
 import React from 'react';
 import '../AboutUs_page/CTABanner.css'; // Import corresponding CSS
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const CTABanner = () => {
   return (
