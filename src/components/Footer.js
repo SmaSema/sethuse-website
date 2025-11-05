@@ -12,7 +12,7 @@
 */
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Add useNavigate
 import { onAuthStateChanged, signOut, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebase/config';
 import './Footer.css';
@@ -31,6 +31,7 @@ function Footer() {
   const [loginError, setLoginError] = useState('');
   const [resetError, setResetError] = useState('');
   const [resetSuccess, setResetSuccess] = useState('');
+  const navigate = useNavigate(); // Add navigation hook
 
   // Check auth state
   useEffect(() => {
@@ -48,8 +49,8 @@ function Footer() {
     try {
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       setShowAdminModal(false);
-      // Redirect to admin page after successful login - UPDATED FOR HashRouter
-      window.location.href = '/#/admin';
+      // Redirect to admin page after successful login
+      navigate('/admin');
     } catch (error) {
       console.error('Login error:', error);
       switch (error.code) {
@@ -113,6 +114,8 @@ function Footer() {
   const handleAdminLogout = async () => {
     try {
       await signOut(auth);
+      // Redirect to home page after logout
+      navigate('/');
     } catch (error) {
       console.error('Logout error:', error);
     }

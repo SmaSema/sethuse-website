@@ -39,6 +39,7 @@
   object-fit: cover;       /* Crop image nicely if needed */
   display: block;          /* Makes margin auto centering work */
   margin: 3rem auto 0;     /* Top margin + center horizontally */
+  padding-top: 1.5rem;
 }
 
 /* Container for project info (title, description, date, etc.) */

@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import { auth } from '../../firebase/config';
 import './AdminLogin.css';
 
@@ -12,6 +13,7 @@ const AdminLogin = ({ onLogin }) => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Add navigation hook
 
   // Only allow Sinqobile Zungu's email
   const allowedEmail = 'sinqobilezungu@sethuse.org'; // Replace with actual email
@@ -31,6 +33,8 @@ const AdminLogin = ({ onLogin }) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       onLogin();
+      // Redirect to admin page after successful login
+      navigate('/admin');
     } catch (error) {
       console.error('Login error:', error);
       switch (error.code) {

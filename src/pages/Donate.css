@@ -1,44 +1,317 @@
-/* Donate Page Styles */
-.donate-page {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  margin: 0 auto;
-}
-
+/* Success Page Styles */
 .success-message {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .success-message h2 {
-  color: #4CAF50;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
 }
 
-.success-message p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+.donation-confirmation {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 2rem;
   line-height: 1.6;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+}
+
+.donation-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.donation-summary h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #6a1b9a;
+  padding-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.summary-item.full-width {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.summary-item .label {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+}
+
+.summary-item .value {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.summary-item:nth-child(even) {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.impact-message {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #4CAF50;
+}
+
+.impact-message h4 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.impact-message p {
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.next-steps {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px solid #e0e0e0;
+}
+
+.next-steps h4 {
+  color: #6a1b9a;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.next-steps li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.success-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+
+.back-button, .donate-again-button, .contact-button {
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 180px;
 }
 
 .back-button {
-  background-color: #4CAF50;
+  background-color: #6a1b9a;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s;
 }
 
 .back-button:hover {
+  background-color: #5a148a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.3);
+}
+
+.donate-again-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.donate-again-button:hover {
   background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.contact-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.contact-button:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.thank-you-note {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #FF9800;
+  margin-top: 2rem;
+}
+
+.thank-you-note p {
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+.loading-spinner {
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+}
+
+/* Cancel Page Styles */
+.cancel-message {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+}
+
+.cancel-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-button {
+  padding: 12px 24px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.home-button:hover {
+  background-color: #5a6268;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-message {
+    padding: 30px 15px;
+    margin: 1rem;
+  }
+
+  .success-message h2 {
+    font-size: 1.8rem;
+  }
+
+  .donation-confirmation {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .summary-item .value {
+    font-size: 1rem;
+  }
+
+  .success-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-button,
+  .donate-again-button,
+  .contact-button {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .donation-summary {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-message {
+    padding: 20px 10px;
+  }
+
+  .success-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .donation-confirmation {
+    font-size: 1rem;
+  }
+
+  .summary-item .label,
+  .summary-item .value {
+    font-size: 0.9rem;
+  }
 }

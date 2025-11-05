@@ -6,6 +6,7 @@
 
 import React from 'react';
 import '../AboutUs_page/CTABanner.css'; // Import corresponding CSS
+import { Link } from 'react-router-dom'
 
 const CTABanner = () => {
   return (
@@ -22,9 +23,9 @@ const CTABanner = () => {
         {/* Description text */}
         <p>Your support helps us grow stronger communities.</p>
         {/* Button to redirect user to the contact/volunteer page */}
-        <button onClick={() => window.location.href = '/contact'}>
-          Volunteer
-        </button>
+        <Link to="/contact">
+          <button>Volunteer</button>
+        </Link>
       </div>
     </section>
   );
