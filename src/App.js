@@ -38,7 +38,7 @@ function App() {
     const timer = setTimeout(() => {
       AOS.init({ 
         duration: 1000, // Animation duration in ms
-        once: false      // Animation repeats when elements enter viewport again
+        once: true      // Animation doesnt repeat when elements enter viewport again
       });
       setAppLoading(false);
     }, 2000);
