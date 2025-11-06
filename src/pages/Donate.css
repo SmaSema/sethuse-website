@@ -293,6 +293,68 @@
   background: #5a148a;
 }
 
+/* Add these styles to your Donate.css */
+
+.email-status {
+  background: #e3f2fd;
+  border: 1px solid #2196F3;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.email-success {
+  background: #e8f5e8;
+  border: 1px solid #4CAF50;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.email-notice {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.email-status p,
+.email-success p,
+.email-notice p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Success message enhancements */
+.success-message,
+.payment-success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.success-message h2,
+.payment-success-message h2 {
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.success-message p,
+.payment-success-message p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .success-message {

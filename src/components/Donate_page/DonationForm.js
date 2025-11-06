@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Loading from '../Loading/Loading';
 import { initiatePayFastPayment, validatePaymentData } from '../../utils/payfastService';
+import emailjs from '@emailjs/browser';
 import './DonationForm.css';
 
 const DonationForm = ({ 
@@ -16,10 +17,88 @@ const DonationForm = ({
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState([]);
 
+  // Debug environment variables
+  const debugEmailJSConfig = () => {
+    console.log('🔧 EmailJS Configuration:');
+    console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', process.env.REACT_APP_EMAILJS_DONATION_TEMPLATE_ID);
+    console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY ? 'Set' : 'Missing');
+    
+    const allSet = process.env.REACT_APP_EMAILJS_SERVICE_ID && 
+                   process.env.REACT_APP_EMAILJS_DONATION_TEMPLATE_ID && 
+                   process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    console.log('All EmailJS variables set:', allSet);
+  };
+
+  // Function to send donation confirmation email - ONLY called after successful payment
+  const sendDonationConfirmationEmail = async (donationData) => {
+    try {
+      // Debug first
+      debugEmailJSConfig();
+      
+      if (!donationData.email) {
+        console.log('❌ No email address provided for confirmation');
+        return false;
+      }
+
+      console.log('📧 Sending payment confirmation email to:', donationData.email);
+      
+      // Use EXACT variable names that match your EmailJS template
+      const templateParams = {
+        // These must match your template variables exactly
+        name: donationData.donor || 'Valued Supporter',
+        email: donationData.email,
+        amount: donationData.amount,
+        donation_type: donationData.type === 'monthly' ? 'Monthly Donation' : 'One-time Donation',
+        date: new Date().toLocaleDateString('en-ZA', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }),
+        donation_id: `SETH-${Date.now()}`,
+        message: donationData.message || 'No additional message provided.',
+        
+        // Optional: keep these for the email headers
+        to_email: donationData.email,
+        from_name: 'Sethuse Community Haven'
+      };
+
+      console.log('📤 Payment confirmation email params:', templateParams);
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_DONATION_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('✅ Payment confirmation email sent successfully:', result);
+      return true;
+    } catch (error) {
+      console.error('❌ Failed to send payment confirmation email:', {
+        message: error.text || error.message,
+        status: error.status,
+        fullError: error
+      });
+      return false;
+    }
+  };
+
   const handlePayFastSubmit = async (e) => {
     e.preventDefault();
     setIsProcessing(true);
     setErrors([]);
+
+    // Debug environment variables on submit
+    debugEmailJSConfig();
+
+    // Validate required fields
+    if (!donorInfo.name || !donorInfo.email) {
+      setErrors(['Please fill in all required fields']);
+      setIsProcessing(false);
+      return;
+    }
 
     // Get final amount
     const finalAmount = customAmount ? parseFloat(customAmount) : amount;
@@ -31,6 +110,14 @@ const DonationForm = ({
       return;
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(donorInfo.email)) {
+      setErrors(['Please enter a valid email address']);
+      setIsProcessing(false);
+      return;
+    }
+
     // Prepare payment data
     const paymentData = {
       amount: finalAmount.toFixed(2),
@@ -38,7 +125,10 @@ const DonationForm = ({
       name_first: donorInfo.name.split(' ')[0] || 'Donor',
       name_last: donorInfo.name.split(' ').slice(1).join(' ') || '',
       email_address: donorInfo.email,
-      custom_str1: donorInfo.message || `Donation from ${donorInfo.name}`
+      custom_str1: donorInfo.message || `Donation from ${donorInfo.name}`,
+      return_url: `${window.location.origin}/#/donate?payment=success&email=${encodeURIComponent(donorInfo.email)}&amount=${finalAmount}&name=${encodeURIComponent(donorInfo.name)}&type=${donationType}`,
+      cancel_url: `${window.location.origin}/#/donate?payment=cancelled`,
+      notify_url: `${window.location.origin}/api/payfast-notify`
     };
 
     // Validate data
@@ -51,37 +141,37 @@ const DonationForm = ({
     }
 
     try {
-      // Store donation details in sessionStorage before redirect
+      // Store donation details for email sending AFTER successful payment
       const donationDetails = {
         amount: finalAmount,
         type: donationType,
         donor: donorInfo.name,
         email: donorInfo.email,
         message: donorInfo.message,
-        timestamp: new Date().toISOString(),
-        item_name: paymentData.item_name
+        timestamp: new Date().toISOString()
       };
       
-      console.log('Storing donation details:', donationDetails);
-      sessionStorage.setItem('lastDonation', JSON.stringify(donationDetails));
+      console.log('💾 Storing donation details for post-payment email:', donationDetails);
       
-      // Also store in localStorage as backup
-      localStorage.setItem('lastDonation', JSON.stringify(donationDetails));
+      // Store in session storage - this will be used in Donate.js after PayFast return
+      sessionStorage.setItem('pendingDonation', JSON.stringify(donationDetails));
+      localStorage.setItem('pendingDonation', JSON.stringify(donationDetails)); // Backup
       
       // Add a small delay to show loading state
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Initiate PayFast payment
+      // Initiate PayFast payment - NO email sent here
+      console.log('🔄 Initiating PayFast payment (email will be sent after payment)...');
       await initiatePayFastPayment(paymentData, donationType);
       
     } catch (error) {
-      console.error('Payment initiation failed:', error);
+      console.error('❌ Payment initiation failed:', error);
       setErrors(['Failed to process payment. Please try again.']);
       setIsProcessing(false);
       
       // Clean up storage on error
-      sessionStorage.removeItem('lastDonation');
-      localStorage.removeItem('lastDonation');
+      sessionStorage.removeItem('pendingDonation');
+      localStorage.removeItem('pendingDonation');
     }
   };
 
@@ -92,21 +182,27 @@ const DonationForm = ({
           <Loading 
             type="pulse" 
             size="large" 
-            text="Processing your donation..." 
+            text="Redirecting to secure payment..." 
           />
           <div className="processing-steps">
             <div className="step active">
               <span className="step-number">1</span>
               <span className="step-text">Validating donation details</span>
             </div>
-            <div className="step">
+            <div className="step active">
               <span className="step-number">2</span>
-              <span className="step-text">Redirecting to secure payment</span>
+              <span className="step-text">Preparing secure payment</span>
             </div>
             <div className="step">
               <span className="step-number">3</span>
-              <span className="step-text">Completing transaction</span>
+              <span className="step-text">Redirecting to PayFast</span>
             </div>
+          </div>
+          
+          <div className="email-notice">
+            <p>🔒 You will be redirected to PayFast for secure payment</p>
+            <p className="donor-email">Confirmation email will be sent after payment</p>
+            <small>Please complete the payment process</small>
           </div>
         </div>
       </div>
@@ -186,6 +282,9 @@ const DonationForm = ({
               required
               disabled={isProcessing}
             />
+            <small className="email-note">
+              Confirmation email will be sent after successful payment
+            </small>
           </div>
           
           <div className="form-group">
@@ -197,12 +296,15 @@ const DonationForm = ({
               onChange={handleInputChange}
               disabled={isProcessing}
             />
+            <small className="message-note">
+              Add a dedication or message for your donation
+            </small>
           </div>
           
           <button 
             type="submit" 
             className="donate-button2"
-            disabled={isProcessing}
+            disabled={isProcessing || !donorInfo.name || !donorInfo.email}
           >
             {isProcessing ? (
               <Loading type="dots" size="small" text="" />
@@ -212,9 +314,20 @@ const DonationForm = ({
           </button>
         </form>
 
+        <div className="confirmation-info">
+          <div className="info-item">
+            <span className="icon">📧</span>
+            <span>Confirmation email sent after payment</span>
+          </div>
+          <div className="info-item">
+            <span className="icon">🔒</span>
+            <span>Secure payment by PayFast Sandbox</span>
+          </div>
+        </div>
+
         <div className="security-badge">
-          <p>🔒 Secure payment by PayFast Sandbox</p>
-          <p><small>This is a test environment</small></p>
+          <p><strong>Test Environment</strong></p>
+          <p><small>No real payments processed</small></p>
         </div>
       </div>
     </div>

@@ -166,11 +166,7 @@ const DonateSuccess = () => {
           <Link to="/donate" className="donate-again-button">
             Make Another Donation
           </Link>
-          {donationDetails?.type === 'monthly' && (
-            <a href="/contact" className="contact-button">
-              Contact About Subscription
-            </a>
-          )}
+          
         </div>
 
         <div className="thank-you-note">

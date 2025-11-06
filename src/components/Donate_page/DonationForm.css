@@ -243,6 +243,89 @@
   box-shadow: none !important;
 }
 
+/* Email Confirmation Styles */
+.email-notice {
+  background: #e8f5e8;
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.email-notice p {
+  margin: 0.25rem 0;
+}
+
+.donor-email {
+  font-weight: bold;
+  color: #2E7D32;
+  font-size: 1.1rem;
+}
+
+.email-note, .message-note {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.confirmation-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.info-item .icon {
+  font-size: 1.2rem;
+}
+
+.donate-button2:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Processing steps enhancements */
+.processing-steps {
+  margin-top: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.step.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.step-number {
+  background: #6a1b9a;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
 
 @media (max-width: 768px) {
   .amount-options {
