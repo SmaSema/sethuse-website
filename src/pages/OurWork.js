@@ -77,42 +77,46 @@ const OurWork = () => {
       <ObjectivesSection />
       
       <section className="projects">
-        <h5>Highlights of Our Work</h5>
-        <hr className="divider" />
-        
-        {error && (
-          <div style={{ 
-            background: '#ffebee', 
-            color: '#c62828', 
-            padding: '1rem', 
-            margin: '1rem',
-            borderRadius: '4px',
-            textAlign: 'center'
-          }}>
-            {error}
-          </div>
-        )}
-        
-        {workData.length === 0 ? (
-          <div style={{ 
-            textAlign: 'center', 
-            padding: '3rem',
-            color: '#666'
-          }}>
-            <p>No projects found. Add some projects in the admin panel!</p>
-          </div>
-        ) : (
-          workData.map((work, idx) => (
-            <ProjectCard 
-              key={work.id || idx} 
-              title={work.title}
-              date={work.date}
-              objectives={work.objectives || []}
-              image={work.image}
-              description={work.description}
-            />
-          ))
-        )}
+        <div className="container">
+          <h5>Highlights of Our Work</h5>
+          <hr className="divider" />
+          
+          {error && (
+            <div style={{ 
+              background: '#ffebee', 
+              color: '#c62828', 
+              padding: '1rem', 
+              margin: '1rem 0',
+              borderRadius: '4px',
+              textAlign: 'center'
+            }}>
+              {error}
+            </div>
+          )}
+          
+          {workData.length === 0 ? (
+            <div style={{ 
+              textAlign: 'center', 
+              padding: '3rem',
+              color: '#666'
+            }}>
+              <p>No projects found. Add some projects in the admin panel!</p>
+            </div>
+          ) : (
+            <div className="projects-grid-container">
+              {workData.map((work, idx) => (
+                <ProjectCard 
+                  key={work.id || idx} 
+                  title={work.title}
+                  date={work.date}
+                  objectives={work.objectives || []}
+                  image={work.image}
+                  description={work.description}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </section>
 
       <Testimonial />

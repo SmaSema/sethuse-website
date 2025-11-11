@@ -1,95 +1,355 @@
-/* Author: Smangalene Charles Sema & Ntsikayethu Nyamezele                               */
-/* Date: 5 September 2025                                        */
-/* Description: Styles for the Project Card component on the    */
-/*              Our Work page. Includes layout, card design,    */
+/* Author: Smangalene Charles Sema & Ntsikayethu Nyamezele */
+/* Date: 5 September 2025 */
+/* Description: Styles for the Project Card component on the */
+/*              Our Work page. Includes layout, card design, */
 /*              image styling, and tags for project objectives. */
 
 /* Container for all projects */
 .projects {
-  padding: 2rem 1rem;               /* Vertical and horizontal spacing */
-  background-color: #e5e3e3b6;      /* Light semi-transparent background */
+  padding: 2rem 1rem;
+  background-color: #e5e3e3b6;
+}
+
+/* Projects grid container - ADD THIS TO YOUR PARENT COMPONENT */
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Decorative line under headings */
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #6a1b9a; /* Matches accent color */
+  background-color: #6a1b9a;
   border: none;
-  margin: 10px auto 20px;    /* Centered with spacing */
+  margin: 10px auto 30px;
 }
 
 /* Individual project card styling */
 .project-card {
   display: flex;
-  flex-direction: column;               /* Stack elements vertically */
-  background-color: #fff;               /* White card background */
-  margin: 3rem auto 2rem;               /* Center horizontally and spacing top/bottom */
-  border-radius: 10px;                  /* Rounded corners */
-  overflow: hidden;                      /* Clip overflowing child elements */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft shadow for depth */
-  width: 80%;                            /* Card width relative to parent */
-  max-width: 1800px;                     /* Prevent overly wide cards */
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Image container for tooltip positioning */
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
 /* Project image styling */
 .project-image {
-  width: 92%;              /* Image width relative to card */
-  height: auto;            /* Maintain aspect ratio */
-  object-fit: cover;       /* Crop image nicely if needed */
-  display: block;          /* Makes margin auto centering work */
-  margin: 3rem auto 0;     /* Top margin + center horizontally */
-  padding-top: 1.5rem;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+}
+
+/* Tooltip styling */
+.image-tooltip {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Tooltip animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* Container for project info (title, description, date, etc.) */
 .project-info {
-  padding: 1rem;
-  padding-left: 3rem;
-  padding-right: 4rem;
-  padding-bottom: 4rem;    /* Extra padding at bottom */
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  margin: 0 0 0.8rem 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-info p {
+  margin: 0.3rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.project-description {
+  flex-grow: 1;
+  margin-bottom: 1rem !important;
 }
 
 /* Tags container under project description */
 .objectives-tags {
-  margin-top: 0.5rem;      /* Space above tags */
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 /* Individual tag styling */
 .tag {
-  display: inline-block;    /* Allows multiple tags on the same line */
-  background-color: #e0d6f3; /* Light purple background */
-  color: #4b2e83;           /* Dark purple text */
-  padding: 0.3rem 0.6rem;   /* Inner spacing for readability */
-  border-radius: 8px;        /* Rounded edges */
-  font-size: 0.75rem;        /* Small text size for tags */
-  margin: 0.2rem;            /* Space between tags */
+  display: inline-block;
+  background-color: #e0d6f3;
+  color: #4b2e83;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/* Lightbox content container */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.close-btn:active {
+  transform: scale(0.95);
+}
+
+/* Lightbox image */
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.lightbox-content img:hover {
+  transform: scale(1.01);
+}
+
+/* Image title only */
+.image-title {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .projects-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .image-title {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  /* Individual project card styling */
-.project-card {
-  width: 100%;
+  .projects-grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .project-card {
+    margin: 0;
+    width: 100%;
+  }
+
+  .project-image {
+    height: 200px;
+    margin: 0;
+  }
+
+  .project-info {
+    padding: 1.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  /* Smaller tooltip on mobile */
+  .image-tooltip {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+    bottom: 15px;
+  }
+
+  /* Mobile lightbox adjustments */
+  .lightbox-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-title {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    margin-top: 0.8rem;
+  }
 }
 
-/* Project image styling */
-.project-image {
-  margin: 1.5rem auto 0;  /* Top margin */
-  padding: 1rem;
-}
-
-  /* Container for project info (title, description, date, etc.) */
-.project-info {
-  padding: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 4rem;    /* Extra padding at bottom */
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .projects {
+    padding: 1rem 0.5rem;
+  }
   
-}
+  .projects-grid-container {
+    gap: 1rem;
+    padding: 0 0.25rem;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
 
-.project-info p {
-  text-align: left;
-}
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 1.8rem;
+    width: 35px;
+    height: 35px;
+  }
 
+  .image-title {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.6rem;
+  }
 }

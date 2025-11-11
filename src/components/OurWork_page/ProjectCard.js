@@ -1,48 +1,93 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Project Card component for displaying projects
-
-import React from "react";
+import React, { useState } from "react";
 import '../OurWork_page/ProjectCard.css';
 
-// Placeholder image
 const placeholderImage = 'https://via.placeholder.com/800x400/6a1b9a/ffffff?text=Project+Image';
 
 export default function ProjectCard({ title, date, objectives, image, description }) {
-  // Ensure we never pass empty string to src
+  const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const validImage = image && image !== '' ? image : placeholderImage;
-  
-  // Ensure objectives is always an array
   const validObjectives = objectives && Array.isArray(objectives) ? objectives : [];
 
-  return (
-    <div className="project-card" data-aos="fade-right">
-      {/* Project image - never empty src */}
-      <img 
-        src={validImage} 
-        alt={title || "Project Image"} 
-        className="project-image"
-        onError={(e) => {
-          console.warn('❌ Image failed to load:', validImage);
-          e.target.src = placeholderImage;
-          e.target.alt = "Fallback project image";
-        }}
-        onLoad={() => console.log('✅ Image loaded successfully:', validImage)}
-      />
+  // Close lightbox when clicking outside image or on close button
+  const handleLightboxClose = (e) => {
+    if (e.target.classList.contains('lightbox') || e.target.classList.contains('close-btn')) {
+      setIsOpen(false);
+    }
+  };
 
-      <div className="project-info">
-        <h3>{title || "Untitled Project"}</h3>
-        <p><strong>Date:</strong> {date || "Date not specified"}</p>
-        <p>{description || "No description available."}</p>
-        
-        {validObjectives.length > 0 && (
-          <div className="objectives-tags">
-            {validObjectives.map((obj, i) => (
-              <span key={i} className="tag">{obj}</span>
-            ))}
-          </div>
-        )}
+  // Close lightbox with Escape key
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  return (
+    <>
+      <div className="project-card" data-aos="fade-up">
+        <div className="image-container">
+          <img 
+            src={validImage} 
+            alt={title || "Project Image"} 
+            className="project-image"
+            onClick={() => setIsOpen(true)}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+            onError={(e) => { e.target.src = placeholderImage; e.target.alt = "Fallback project image"; }}
+          />
+          {/* Tooltip */}
+          {showTooltip && (
+            <div className="image-tooltip">
+              Click to enlarge image
+              <div className="tooltip-arrow"></div>
+            </div>
+          )}
+        </div>
+
+        <div className="project-info">
+          <h3>{title || "Untitled Project"}</h3>
+          <p><strong>Date:</strong> {date || "Date not specified"}</p>
+          <p className="project-description">{description || "No description available."}</p>
+          
+          {validObjectives.length > 0 && (
+            <div className="objectives-tags">
+              {validObjectives.map((obj, i) => (
+                <span key={i} className="tag">{obj}</span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      {/* Lightbox overlay - Simplified with only image and title */}
+      {isOpen && (
+        <div className="lightbox" onClick={handleLightboxClose}>
+          <button className="close-btn" aria-label="Close image">
+            &times;
+          </button>
+          <div className="lightbox-content">
+            <img src={validImage} alt={title || "Project Image"} />
+            <div className="image-title">
+              {title || "Project Image"}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
