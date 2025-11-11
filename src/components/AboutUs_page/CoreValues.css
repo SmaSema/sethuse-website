@@ -1,6 +1,6 @@
 /* 
-   Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-   Date: 5 September 2025
+   Author: Smangalene Charles Sema
+   Date: 11 November 2025
    Description: Styles for the Core Values section on the About Us page.
                 Includes section container, grid layout, individual value cards,
                 divider line, and responsive adjustments for mobile devices.
@@ -50,13 +50,13 @@
 */
 @media (max-width: 768px) {
   .core-values {
-    padding: 0 1rem;             /* Reduce side padding on small screens */
+    padding: 0 2rem;             /* Reduce side padding on small screens */
     margin-top: -2rem;           /* Adjust spacing above section */
   }
 
   .core-values-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 2rem;                          /* Reduce gap */
+    grid-template-columns: repeat(1, 1fr); /* Two cards per row */
+    gap: 0.1rem;                          /* Reduce gap */
     margin-top: 2rem;                    /* Adjust top margin */
   }
 
