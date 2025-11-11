@@ -22,6 +22,10 @@ const ProjectManagement = () => {
   const [imageUploading, setImageUploading] = useState(false);
   const [editingProject, setEditingProject] = useState(null);
   const [message, setMessage] = useState({ text: '', type: '', visible: false });
+  const [deleteConfirmation, setDeleteConfirmation] = useState({ 
+    show: false, 
+    project: null 
+  });
   const [formData, setFormData] = useState({
     title: '',
     date: '',
@@ -211,15 +215,29 @@ const ProjectManagement = () => {
   };
 
   const deleteProject = async (projectId) => {
-    if (window.confirm('Are you sure you want to delete this project? This action cannot be undone.')) {
-      try {
-        await deleteDoc(doc(db, 'projects', projectId));
-        showMessage('Project deleted successfully!', 'success');
-      } catch (error) {
-        console.error('Error deleting project:', error);
-        showMessage('Error deleting project. Please try again.', 'error');
-      }
+    const projectToDelete = projects.find(p => p.id === projectId);
+    setDeleteConfirmation({ 
+      show: true, 
+      project: projectToDelete 
+    });
+  };
+
+  const confirmDelete = async () => {
+    if (!deleteConfirmation.project) return;
+    
+    try {
+      await deleteDoc(doc(db, 'projects', deleteConfirmation.project.id));
+      showMessage('Project deleted successfully!', 'success');
+      setDeleteConfirmation({ show: false, project: null });
+    } catch (error) {
+      console.error('Error deleting project:', error);
+      showMessage('Error deleting project. Please try again.', 'error');
+      setDeleteConfirmation({ show: false, project: null });
     }
+  };
+
+  const cancelDelete = () => {
+    setDeleteConfirmation({ show: false, project: null });
   };
 
   // Clean up object URLs on unmount
@@ -248,6 +266,41 @@ const ProjectManagement = () => {
             >
               ×
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Delete Confirmation Popup */}
+      {deleteConfirmation.show && (
+        <div className="delete-confirmation-overlay" onClick={cancelDelete}>
+          <div className="delete-confirmation-popup" onClick={(e) => e.stopPropagation()}>
+            <div className="delete-confirmation-header">
+              <div className="delete-confirmation-icon">🗑️</div>
+              <h3>Delete Project</h3>
+            </div>
+            <div className="delete-confirmation-body">
+              <p>Are you sure you want to delete this project? This action cannot be undone.</p>
+              {deleteConfirmation.project && (
+                <div className="delete-confirmation-project">
+                  <h4>{deleteConfirmation.project.title}</h4>
+                  <p>Date: {deleteConfirmation.project.date}</p>
+                </div>
+              )}
+              <div className="delete-confirmation-actions">
+                <button 
+                  onClick={cancelDelete}
+                  className="cancel-delete-btn"
+                >
+                  Cancel
+                </button>
+                <button 
+                  onClick={confirmDelete}
+                  className="confirm-delete-btn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
