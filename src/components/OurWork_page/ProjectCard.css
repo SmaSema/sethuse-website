@@ -76,6 +76,7 @@
 /* Project image styling */
 .project-image {
   margin: 1.5rem auto 0;  /* Top margin */
+  padding: 1rem;
 }
 
   /* Container for project info (title, description, date, etc.) */
