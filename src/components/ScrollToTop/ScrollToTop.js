@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 27 August 2025
-// Description: 
 //   A React component that automatically scrolls the window to the top 
 //   whenever the route changes. Useful for single-page applications 
 //   to ensure the user sees the top of the new page after navigation.

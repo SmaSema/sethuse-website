@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Project management with Cloudinary image uploads and styled success messages
+// Project management with Cloudinary image uploads and styled success messages
 
 import React, { useState, useEffect } from 'react';
 import { 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Loading from '../Loading/Loading';
-import { initiatePayFastPayment, validatePaymentData } from '../../utils/payfastService';
+import { initializePaystackPayment } from '../../utils/paystackConfig';
 import emailjs from '@emailjs/browser';
 import './DonationForm.css';
 
@@ -57,8 +57,25 @@ const DonationForm = ({
         }),
         donation_id: `SETH-${Date.now()}`,
         message: donationData.message || 'No additional message provided.',
+        payment_gateway: 'Paystack',
         
-        // Optional: keep these for the email headers
+        // Subscription management info for email template
+        subscription_management: donationData.type === 'monthly' ? `
+          <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #28a745;">
+            <h3 style="color: #2c5530; margin-bottom: 10px;">Manage Your Monthly Subscription</h3>
+            <p>You can manage or cancel your subscription anytime by:</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Using the subscription management links in your Paystack account</li>
+              <li>Checking your email for Paystack subscription management emails</li>
+              <li>Contacting us at zungusinqobiley@gmail.com for assistance</li>
+            </ul>
+            <p style="margin: 10px 0 0 0; font-size: 0.9em; color: #666;">
+              <em>You can cancel at any time. Cancellations take effect at the end of your current billing period.</em>
+            </p>
+          </div>
+        ` : '<p style="margin: 15px 0;">Thank you for your one-time donation support!</p>',
+        
+        // Email headers
         to_email: donationData.email,
         from_name: 'Sethuse Community Haven'
       };
@@ -85,7 +102,7 @@ const DonationForm = ({
     }
   };
 
-  const handlePayFastSubmit = async (e) => {
+  const handlePaymentSubmit = async (e) => {
     e.preventDefault();
     setIsProcessing(true);
     setErrors([]);
@@ -118,55 +135,42 @@ const DonationForm = ({
       return;
     }
 
-    // Prepare payment data
-    const paymentData = {
-      amount: finalAmount.toFixed(2),
-      item_name: `${donationType === 'monthly' ? 'Monthly' : 'Once-Off'} Donation - Sethuse Community Haven`,
-      name_first: donorInfo.name.split(' ')[0] || 'Donor',
-      name_last: donorInfo.name.split(' ').slice(1).join(' ') || '',
-      email_address: donorInfo.email,
-      custom_str1: donorInfo.message || `Donation from ${donorInfo.name}`,
-      return_url: `${window.location.origin}/#/donate?payment=success&email=${encodeURIComponent(donorInfo.email)}&amount=${finalAmount}&name=${encodeURIComponent(donorInfo.name)}&type=${donationType}`,
-      cancel_url: `${window.location.origin}/#/donate?payment=cancelled`,
-      notify_url: `${window.location.origin}/api/payfast-notify`
+    // Store donation details for email sending AFTER successful payment
+    const donationDetails = {
+      amount: finalAmount,
+      type: donationType,
+      donor: donorInfo.name,
+      email: donorInfo.email,
+      message: donorInfo.message,
+      timestamp: new Date().toISOString(),
+      gateway: 'paystack'
     };
-
-    // Validate data
-    const validation = validatePaymentData(paymentData);
     
-    if (!validation.isValid) {
-      setErrors(validation.errors);
-      setIsProcessing(false);
-      return;
-    }
-
+    console.log('💾 Storing donation details for post-payment email:', donationDetails);
+    
+    // Store in session storage - this will be used in Donate.js after payment return
+    sessionStorage.setItem('pendingDonation', JSON.stringify(donationDetails));
+    localStorage.setItem('pendingDonation', JSON.stringify(donationDetails)); // Backup
+    
     try {
-      // Store donation details for email sending AFTER successful payment
-      const donationDetails = {
-        amount: finalAmount,
-        type: donationType,
-        donor: donorInfo.name,
-        email: donorInfo.email,
-        message: donorInfo.message,
-        timestamp: new Date().toISOString()
-      };
-      
-      console.log('💾 Storing donation details for post-payment email:', donationDetails);
-      
-      // Store in session storage - this will be used in Donate.js after PayFast return
-      sessionStorage.setItem('pendingDonation', JSON.stringify(donationDetails));
-      localStorage.setItem('pendingDonation', JSON.stringify(donationDetails)); // Backup
-      
       // Add a small delay to show loading state
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Initiate PayFast payment - NO email sent here
-      console.log('🔄 Initiating PayFast payment (email will be sent after payment)...');
-      await initiatePayFastPayment(paymentData, donationType);
+      // Paystack payment flow with subscription support
+      const paystackData = {
+        email: donorInfo.email,
+        amount: finalAmount,
+        name: donorInfo.name,
+        donationType: donationType,
+        message: donorInfo.message
+      };
+
+      console.log('🔄 Initiating Paystack payment...');
+      await initializePaystackPayment(paystackData);
       
     } catch (error) {
       console.error('❌ Payment initiation failed:', error);
-      setErrors(['Failed to process payment. Please try again.']);
+      setErrors([error.message || 'Failed to process payment. Please try again.']);
       setIsProcessing(false);
       
       // Clean up storage on error
@@ -182,26 +186,58 @@ const DonationForm = ({
           <Loading 
             type="pulse" 
             size="large" 
-            text="Redirecting to secure payment..." 
+            text={
+              donationType === 'monthly' 
+                ? "Setting up monthly subscription..." 
+                : "Redirecting to secure payment..."
+            } 
           />
           <div className="processing-steps">
             <div className="step active">
               <span className="step-number">1</span>
               <span className="step-text">Validating donation details</span>
             </div>
+            
+            {donationType === 'monthly' && (
+              <div className="step active">
+                <span className="step-number">2</span>
+                <span className="step-text">Creating subscription plan</span>
+              </div>
+            )}
+            
             <div className="step active">
-              <span className="step-number">2</span>
+              <span className="step-number">
+                {donationType === 'monthly' ? '3' : '2'}
+              </span>
               <span className="step-text">Preparing secure payment</span>
             </div>
+            
             <div className="step">
-              <span className="step-number">3</span>
-              <span className="step-text">Redirecting to PayFast</span>
+              <span className="step-number">
+                {donationType === 'monthly' ? '4' : '3'}
+              </span>
+              <span className="step-text">
+                Redirecting to Paystack
+              </span>
             </div>
           </div>
           
           <div className="email-notice">
-            <p>🔒 You will be redirected to PayFast for secure payment</p>
-            <p className="donor-email">Confirmation email will be sent after payment</p>
+            <p>🔒 You will be redirected to Paystack for secure payment</p>
+            <p className="donor-email">
+              {donationType === 'monthly' 
+                ? 'Monthly subscription will be activated after payment'
+                : 'Confirmation email will be sent after payment'
+              }
+            </p>
+            
+            {/* Subscription Management Info in Loading State */}
+            {donationType === 'monthly' && (
+              <div className="subscription-management-info-loading">
+                <p>📧 <strong>Subscription Management:</strong> You'll receive email links to manage/cancel your subscription anytime</p>
+              </div>
+            )}
+            
             <small>Please complete the payment process</small>
           </div>
         </div>
@@ -240,9 +276,9 @@ const DonationForm = ({
         </div>
 
         <div className="payment-info">
-          <p><strong>Payment Method:</strong> PayFast Sandbox</p>
-          <p><small>🔒 Secure test environment - no real payments</small></p>
-          <p><small>Use test card: 4000000000000002</small></p>
+          <p><strong>Payment Method:</strong> Paystack</p>
+          <p><small>🔒 Secure payment processing</small></p>
+          <p><small>Use test card: 408 408 408 408 408 1</small></p>
         </div>
       </div>
       
@@ -259,7 +295,7 @@ const DonationForm = ({
           </div>
         )}
         
-        <form onSubmit={handlePayFastSubmit}>
+        <form onSubmit={handlePaymentSubmit}>
           <div className="form-group">
             <input
               type="text"
@@ -309,10 +345,30 @@ const DonationForm = ({
             {isProcessing ? (
               <Loading type="dots" size="small" text="" />
             ) : (
-              donationType === 'monthly' ? 'Donate Monthly via PayFast' : 'Donate Now via PayFast'
+              donationType === 'monthly' ? 'Subscribe Monthly via Paystack' : 'Donate Now via Paystack'
             )}
           </button>
         </form>
+
+        {/* Subscription Management Information */}
+        {donationType === 'monthly' && (
+          <div className="subscription-management-info">
+            <div className="info-item">
+              <span className="icon">📧</span>
+              <span>
+                <strong>Monthly Subscription Information:</strong>
+                <br />
+                • You will receive email confirmation with subscription management links
+                <br />
+                • You can manage or cancel your subscription anytime from your Paystack account
+                <br />
+                • Need assistance? Contact us at donations@sethuse.org
+                <br />
+                • Cancellations take effect at the end of your current billing period
+              </span>
+            </div>
+          </div>
+        )}
 
         <div className="confirmation-info">
           <div className="info-item">
@@ -321,13 +377,19 @@ const DonationForm = ({
           </div>
           <div className="info-item">
             <span className="icon">🔒</span>
-            <span>Secure payment by PayFast Sandbox</span>
+            <span>Secure payment by Paystack</span>
           </div>
+          {donationType === 'monthly' && (
+            <div className="info-item">
+              <span className="icon">🔄</span>
+              <span>Monthly subscription automatically renews</span>
+            </div>
+          )}
         </div>
 
         <div className="security-badge">
-          <p><strong>Test Environment</strong></p>
-          <p><small>No real payments processed</small></p>
+          <p><strong>Secure Payment</strong></p>
+          <p><small>PCI DSS compliant</small></p>
         </div>
       </div>
     </div>

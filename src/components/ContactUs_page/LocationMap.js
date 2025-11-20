@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Embeds a Google Maps iframe showing the
+// Embeds a Google Maps iframe showing the
 //              physical location of Sethuse Community Haven.
 //              Used on the Contact Us page to help users
 //              locate the organization easily.

@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description:
 //   The About Us page for Sethuse Community Haven.
 //   This page provides visitors with an overview of the organization,
 //   its mission, core values, team members, and a call-to-action section

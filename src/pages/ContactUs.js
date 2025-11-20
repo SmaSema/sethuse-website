@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description:
 //   The "Contact Us" page for Sethuse Community Haven.
 //   This page allows users to reach out to the organization through
 //   a contact form, view alternative contact information, and 

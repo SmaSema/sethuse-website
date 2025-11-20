@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Admin login component for Sethuse Community Haven - Restricted to Sinqobile Zungu only
+// Admin login component for Sethuse Community Haven - Restricted to Sinqobile Zungu only
 
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';

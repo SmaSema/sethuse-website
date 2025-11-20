@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Admin portal for Sethuse Community Haven - Restricted access
+// Admin portal for Sethuse Community Haven - Restricted access
 
 import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';

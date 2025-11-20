@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema
-// Date: 5 September 2025
-// Description:
 //   Utility file for measuring and reporting web performance metrics in a React app.
 //   Uses the 'web-vitals' library to collect key performance indicators (KPIs).
 

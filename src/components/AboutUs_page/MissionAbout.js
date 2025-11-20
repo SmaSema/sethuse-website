@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: React component for the "Our Mission" section of the About Us page. 
+// React component for the "Our Mission" section of the About Us page. 
 //              Displays the mission statement text alongside an illustrative image,
 //              with fade-in animations using AOS library.
 

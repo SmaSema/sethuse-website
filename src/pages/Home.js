@@ -1,7 +1,3 @@
-// 
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description:
 //   The main homepage component for the Sethuse Community Haven website.
 //   It composes key sections of the homepage in order, including:
 //     1. Hero section (banner with mission statement or call-to-action)

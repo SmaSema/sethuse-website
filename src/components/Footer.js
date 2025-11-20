@@ -1,8 +1,6 @@
 /* 
-   Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-   Date: 27 August 2025
-   Description: Footer component for Sethuse Community Haven website.
-                Features include:
+  Footer component for Sethuse Community Haven website.
+              Features include:
                 - Organization name, tagline, and physical address
                 - Quick navigation links for easy site access
                 - Social media links with icons (Facebook, Instagram, TikTok)

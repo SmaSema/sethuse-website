@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: This React component renders the Hero section of the homepage. 
+// This React component renders the Hero section of the homepage. 
 //              It includes a motivational quote, a short description, and 
 //              call-to-action buttons that direct users to donate or get involved.
 

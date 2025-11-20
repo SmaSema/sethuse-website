@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: This React component displays different ways users can support 
+// This React component displays different ways users can support 
 //              Sethuse Community Haven. It includes options for volunteering, 
 //              making donations, and sharing the organization’s mission via 
 //              social platforms. It also provides a copy-to-clipboard feature 

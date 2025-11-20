@@ -1,7 +1,5 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 27 August 2025
-// Description: React component for a "Scroll to Top" button. 
-//              Features include:
+// React component for a "Scroll to Top" button. 
+//             Features include:
 //              - Appears only after the user scrolls down 300px
 //              - Smooth scrolling behavior to the top
 //              - Accessible via aria-label

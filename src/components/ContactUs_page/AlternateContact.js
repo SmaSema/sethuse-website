@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: This component provides alternate contact methods for 
+// This component provides alternate contact methods for 
 //              Sethuse Community Haven, including email, phone, and WhatsApp.
 //              It is intended to supplement the main contact form, offering
 //              quick ways to reach the organization.

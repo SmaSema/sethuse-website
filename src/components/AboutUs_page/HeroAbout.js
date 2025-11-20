@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: React component for the Hero section on the About Us page. 
+// React component for the Hero section on the About Us page. 
 //              Displays a background section with overlay text including 
 //              a heading and a short description of the organization's mission.
 

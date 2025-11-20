@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: This component renders the Contact Us form for Sethuse Community Haven.
+// This component renders the Contact Us form for Sethuse Community Haven.
 //              Users can enter their name, email, and message to reach out to the organization.
 //              The form is integrated with EmailJS to send emails directly, and displays a
 //              success message on submission.

@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: Displays a testimonial section for the Our Work page.
+// Displays a testimonial section for the Our Work page.
 //              Includes a quote from a community member with attribution
 //              and animation on scroll using AOS library.
 

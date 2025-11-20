@@ -17,7 +17,7 @@
   line-height: 1.6;
 }
 
-.paysharp-features {
+.paystack-features {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
@@ -28,7 +28,7 @@
   margin-right: auto;
 }
 
-.paysharp-features li {
+.paystack-features li {
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -39,12 +39,12 @@
 }
 
 @media (max-width: 600px) {
-  .paysharp-features {
+  .paystack-features {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .paysharp-features li {
+  .paystack-features li {
     font-size: 0.95rem;
     justify-content: flex-start;
   }

@@ -1,6 +1,4 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description: This React component displays the main programs offered by Sethuse Community Haven,
+// This React component displays the main programs offered by Sethuse Community Haven,
 //              including Environmental Improvement, Food Security, and Empowerment Programs. 
 //              It renders each program with an image, title, and description in a grid layout.
 

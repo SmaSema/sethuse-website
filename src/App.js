@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description:
 //   This is the main entry point of the Sethuse Community Haven website.
 //   It sets up routing using React Router, global components (NavBar, Footer),
 //   scroll behavior, and page animations using AOS (Animate On Scroll).

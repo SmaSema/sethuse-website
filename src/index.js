@@ -1,6 +1,3 @@
-// Author: Smangalene Charles Sema & Ntsikayethu Nyamezele
-// Date: 5 September 2025
-// Description:
 //   Entry point of the React application.
 //   Renders the root React component (<App />) into the DOM.
 //   Imports global CSS, main App component, and performance reporting.
