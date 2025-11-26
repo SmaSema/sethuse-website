@@ -54,7 +54,12 @@ A responsive web platform built to support **Sethuse Community Haven**, a nonpro
 
 ### Payment & Services
 - Paystack API  
-- EmailJS  
+- EmailJS
+
+### Deployment & Hosting:
+- **Render** (Production hosting)
+- Git (Version control)
+- Environment-based configuration
 
 ### Development
 - JavaScript (ES6+)  
@@ -490,7 +495,87 @@ CVV: 408 | Expiry: Any future date | PIN: 408
     # Build and serve production
     npm run build && serve -s build
 
-  
+## 🌐 Deployment
+
+### Render Deployment
+This project is deployed on **Render** - a cloud platform that automatically builds and deploys from your Git repository.
+
+#### Deployment Steps:
+##### 1. **Connect Repository**
+   - Go to [Render Dashboard](https://dashboard.render.com)
+   - Click "New" → "Web Service"
+   - Connect your GitHub repository
+
+##### 2. **Configure Build Settings**
+    Build Command: npm run build
+    Publish Directory: build
+    Node Version: 18.x or higher
+
+##### 3. **Environment Variables**
+- Add all environment variables in Render dashboard
+- Go to your service → Environment → Add Environment Variables
+
+##### 4. **Auto-Deployment**
+- Render automatically deploys on git push to connected branch
+- Builds are triggered automatically
+
+#### Render-Specific Configuration:
+- **Build Timeout**: 45 minutes (usually sufficient)
+- **Auto-Deploy**: Enabled by default
+- **Health Check**: `/` endpoint
+- **Branch**: Usually `main` or `master`
+
+### Important Render Notes:
+- **Free Tier**: 750 hours/month, auto-sleeps after inactivity
+- **Custom Domain**: Available in paid plans
+- **SSL**: Automatically provided
+- **Build Logs**: Available in Render dashboard
+
+## 🆘 Support
+
+### Common Issues
+
+#### Payment Processing Issues:
+- Verify Paystack API keys are correct
+- Check that test cards are being used in development
+- Ensure callback URLs are properly configured
+
+#### Firebase Connection Issues:
+- Verify Firebase configuration values
+- Check Firestore security rules
+- Ensure proper CORS configuration
+
+#### Cloudinary Upload Issues:
+- Verify upload preset is properly configured
+- Check file size and format restrictions'
+- Ensure CLOUDINARY_CLOUD_NAME is correct
+
+#### Email Not Sending:
+- Confirm EmailJS service is active
+- Verify template variables match exactly
+- Check browser console for error messages
+
+#### Subscription Management:
+- Subscribers appear in Paystack dashboard under "Subscriptions"
+- Users receive management links via email
+- Cancellations take effect at billing period end
+
+### Getting Help
+#### **- Email Support:** zungusinqobiley@gmail.com
+#### **- Paystack Documentation:** [docs.paystack.com](https://docs.paystack.com)
+#### **- Firebase Documentation:** [firebase.google.com/docs](https://firebase.google.com/docs)
+#### **- Cloudinary Documentation:** [cloudinary.com/documentation](https://cloudinary.com/documentation)
+#### **- React Documentation:** [reactjs.org](https://reactjs.org)
+
+## 🙏 Acknowledgments
+- Paystack for reliable payment processing
+- Firebase for robust backend services
+- Cloudinary for media management
+- EmailJS for seamless email automation
+- React community for excellent documentation
+- All donors and supporters of Sethuse Community Haven
+
+**Sethuse Community Haven -** We Make a Living by What We Get, But We Make a Life by What We Give. 💜
 
 
 
