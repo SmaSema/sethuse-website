@@ -1,3 +1,4 @@
+//   src/index.js
 //   Entry point of the React application.
 //   Renders the root React component (<App />) into the DOM.
 //   Imports global CSS, main App component, and performance reporting.

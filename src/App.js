@@ -1,3 +1,4 @@
+//   src/App.js
 //   This is the main entry point of the Sethuse Community Haven website.
 //   It sets up routing using React Router, global components (NavBar, Footer),
 //   scroll behavior, and page animations using AOS (Animate On Scroll).

@@ -142,7 +142,8 @@ export const initializePaystackPayment = async (paymentData) => {
       amount: paymentData.amount * 100, // Paystack expects amount in kobo
       currency: 'ZAR',
       reference: `sethuse-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      callback_url: `${window.location.origin}/#/donate?payment=success&gateway=paystack&email=${encodeURIComponent(paymentData.email)}&amount=${paymentData.amount}&name=${encodeURIComponent(paymentData.name)}&type=${paymentData.donationType}`,
+      // UPDATED: Using exact Render domain for reliability
+      callback_url: `https://sethuse-website-um0s.onrender.com/#/donate?payment=success&gateway=paystack&email=${encodeURIComponent(paymentData.email)}&amount=${paymentData.amount}&name=${encodeURIComponent(paymentData.name)}&type=${paymentData.donationType}`,
       metadata: {
         custom_fields: [
           {

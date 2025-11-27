@@ -278,7 +278,7 @@ const DonationForm = ({
         <div className="payment-info">
           <p><strong>Payment Method:</strong> Paystack</p>
           <p><small>🔒 Secure payment processing</small></p>
-          <p><small>Use test card: 408 408 408 408 408 1</small></p>
+          <p><small>💳 Visa, Mastercard, Bank Transfer</small></p>
         </div>
       </div>
       
