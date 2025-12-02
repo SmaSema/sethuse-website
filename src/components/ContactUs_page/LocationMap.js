@@ -11,9 +11,12 @@ const LocationMap = () => (
   <div className="location-map">
     <iframe  
       title="Sethuse Location"
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30200.000000000000!2d30.338000000000000!3d-29.650000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s516%20T6%20Edendale%20T,%20Pietermaritzburg%20South%20Africa!5e0!3m2!1sen!2sza!4v1755096439380!5m2!1sen!2sza"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.4433104377235!2d30.3347068!3d-29.6779245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6a2a8538110d1%3A0x307b356917d4522e!2s516%20T6%2C%20Edendale%20T%2C%20Pietermaritzburg%2C%203217!5e0!3m2!1sen!2sza!4v1764682875775!5m2!1sen!2sza" 
+      width="100%" 
+      height="300" 
+      allowfullscreen
+      loading="lazy" 
       allowFullScreen
-      loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     />
   </div>
