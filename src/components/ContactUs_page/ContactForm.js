@@ -1,72 +1,66 @@
-// This component renders the Contact Us form for Sethuse Community Haven.
-//              Users can enter their name, email, and message to reach out to the organization.
-//              The form is integrated with EmailJS to send emails directly, and displays a
-//              success message on submission.
-
 import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';          // EmailJS library for sending emails
-import SuccessMessage from './SuccessMessage';   // Component shown after successful submission
-import '../ContactUs_page/ContactForm.css';      // Form styling
+import emailjs from '@emailjs/browser';
+import SuccessMessage from './SuccessMessage';
+import '../ContactUs_page/ContactForm.css';
 
 const ContactForm = () => {
-  // State to track if the form was successfully submitted
   const [submitted, setSubmitted] = useState(false);
-
-  // Reference to the form element for EmailJS
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
   const form = useRef();
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default page reload
+    e.preventDefault();
+    setIsLoading(true); // Show loading state
 
-    // Send form data using EmailJS
-    emailjs.sendForm(
-      'service_w9n7c9g',    // EmailJS Service ID
-      'template_fztso2r',   // EmailJS Template ID
-      form.current,         // Reference to form DOM node
-      'qe_h8DreeKiY6Ke-o'  // Public API Key
-    )
-    .then(() => {
-      setSubmitted(true);   // Show success message
-    })
-    .catch((error) => {
-      console.error('Email sending error:', error);
-      alert('Something went wrong. Try again later.');
-    });
+    // Get credentials from environment variables
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    // Validate environment variables
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS environment variables are not properly configured');
+      alert('Form configuration error. Please contact support.');
+      setIsLoading(false);
+      return;
+    }
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then(() => {
+        setSubmitted(true);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Email sending error:', error);
+        alert('Something went wrong. Try again later.');
+        setIsLoading(false);
+      });
   };
 
-  // Render either the success message or the contact form
   return submitted ? (
-    <SuccessMessage /> // Display after successful submission
+    <SuccessMessage />
   ) : (
     <div className="contact-section">
       <div className="form-image-wrapper">
-
-        {/* Contact Form */}
         <form
-          ref={form} 
-          className="contact-form" 
-          data-aos="fade-left" // Animation on scroll
+          ref={form}
+          className="contact-form"
+          data-aos="fade-left"
           onSubmit={handleSubmit}
         >
-          {/* User name input */}
           <input type="text" name="name" placeholder="Your Name" required />
-          
-          {/* User email input */}
           <input type="email" name="email" placeholder="Your Email" required />
-          
-          {/* User message input */}
           <textarea name="message" placeholder="Your Message" rows="5" required />
           
-          {/* Submit button */}
-          <button type="submit">Send Message</button>
+          {/* Updated button with loading state */}
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
 
-        {/* Side image next to the form - now using public folder path */}
         <div className="form-side-image">
           <img src="/assets/contact-side.png" alt="Contact Visual" />
         </div>
-
       </div>
     </div>
   );

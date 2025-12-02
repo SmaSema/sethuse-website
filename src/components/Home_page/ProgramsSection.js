@@ -32,13 +32,13 @@ const ProgramsSection = () => {
   return (
     <section className="programs-section">
       {/* Section Title */}
-      <h2 className="programs-title" data-aos="fade-right">Our Work</h2>
-      <hr className="divider-work" data-aos="fade-right" />
+      <h2 className="programs-title">Our Work</h2>
+      <hr className="divider-work"/>
 
       {/* Programs Grid - maps through the programs array */}
       <div className="programs-grid">
         {programs.map((program, index) => (
-          <div className="program-card" key={index} data-aos="fade-right">
+          <div className="program-card" key={index} data-aos="fade-up">
             {/* Program Image */}
             <img src={program.image} alt={program.title} className="program-img" />
 

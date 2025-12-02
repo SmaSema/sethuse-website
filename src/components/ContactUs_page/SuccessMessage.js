@@ -1,4 +1,4 @@
-// Displays a confirmation message after a user
+//              Displays a confirmation message after a user
 //              successfully submits the contact form. Includes
 //              heading and paragraph styling from CSS.
 
