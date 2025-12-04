@@ -8,9 +8,9 @@
                 - Donate button styling
 */
 
-/* ------------------------------------------------------------
+/*
    Navbar container: flex layout for logo and links
------------------------------------------------------------- */
+*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,9 +22,26 @@
   z-index: 10;       /* ensures navbar stays above content */
 }
 
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
 /* Logo inside navbar */
 .navbar-logo img.logo {
   height: 60px;      /* default logo height */
+}
+
+/* Logo text - hidden on mobile by default */
+.logo-text {
+  color: #5b0c57;
+  font-weight: 500;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  display: none; /* Hidden on mobile */
 }
 
 /* Navbar links container */
@@ -78,9 +95,9 @@
   background-color: #0f97b9;
 }
 
-/* ------------------------------------------------------------
+/*
    Hamburger menu icon (mobile)
------------------------------------------------------------- */
+ */
 .mobile-menu-icon {
   display: none;   /* hidden on desktop */
   cursor: pointer;
@@ -112,19 +129,36 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ------------------------------------------------------------
+/*
    Desktop specific adjustments
------------------------------------------------------------- */
+*/
 @media (min-width: 1024px) {
   .navbar-logo img.logo {
     height: 80px; /* larger logo for desktop */
     transition: transform 0.3s ease;
   }
+  
+  /* Show logo text on desktop only */
+  .logo-text {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 650;
+    color: #5b0c57;
+  }
 }
 
-/* ------------------------------------------------------------
+/*
+   Tablet and smaller desktop (optional intermediate breakpoint)
+*/
+@media (min-width: 769px) and (max-width: 1023px) {
+  .logo-text {
+    display: none; /* Hide text on tablet if you want */
+  }
+}
+
+/*
    Mobile responsive styles
------------------------------------------------------------- */
+*/
 @media (max-width: 768px) {
 
   /* Sticky navbar on mobile */
@@ -136,6 +170,11 @@
   /* Default logo height */
   .navbar-logo img.logo {
     height: 60px;
+  }
+
+  /* Keep logo text hidden on mobile */
+  .logo-text {
+    display: none !important;
   }
 
   /* Smooth transition for logo visibility */

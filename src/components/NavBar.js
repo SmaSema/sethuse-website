@@ -47,8 +47,9 @@ const NavBar = () => {
     >
       {/* Logo section */}
       <div className="navbar-logo">
-        <NavLink to="/" onClick={closeMenu}>
+        <NavLink to="/" onClick={closeMenu} className="logo-container">
           <img src={Logo} alt="Sethuse Logo" className="logo" />
+          <span className="logo-text">Sethuse Community Haven</span>
         </NavLink>
       </div>
 
