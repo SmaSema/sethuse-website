@@ -139,7 +139,7 @@ function Footer() {
         {/* Left Section: Organization Name, Tagline, and Address */}
         <div className="footer-logo">
           <h2>Sethuse Community Haven</h2>
-          <p>Empowering communities, transforming lives.</p>
+          <p>We make a living by what we get, but we make a life by what we give.</p>
 
           <div className="footer-address">
             <FaMapMarkerAlt size={16} style={{ marginRight: '8px' }} />
